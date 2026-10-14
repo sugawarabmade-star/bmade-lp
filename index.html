@@ -1563,9 +1563,97 @@
 			color: #fff;
 		}
 		.float-btn-yellow {
-			background: #f2d44f;
+			background: #fce970;
 			color: #171717;
 			box-shadow: inset 0 -3px 0 rgba(122, 91, 0, .14);
+		}
+
+		/* 「弊社が選ばれる理由」ブランドイエローのミニマルデザイン */
+		.reasons-section {
+			position: relative;
+			background: linear-gradient(180deg, #fce970 0, #fce970 230px, #fffdf5 230px, #fffdf5 100%);
+			color: #171717;
+			padding: 64px 20px 76px;
+			overflow: hidden;
+		}
+		.reasons-section::before,
+		.reasons-section::after {
+			content: "";
+			position: absolute;
+			border: 1px solid rgba(23, 23, 23, .16);
+			border-radius: 50%;
+			pointer-events: none;
+		}
+		.reasons-section::before { width: 170px; height: 170px; top: -72px; right: -64px; }
+		.reasons-section::after { width: 96px; height: 96px; top: 28px; right: -34px; }
+		.reasons-inner { position: relative; z-index: 1; max-width: 1080px; }
+		.reasons-title {
+			color: #171717;
+			font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+			font-size: 28px;
+			letter-spacing: .08em;
+			margin-bottom: 12px;
+		}
+		.reasons-lead { color: #34322d; font-size: 14px; margin-bottom: 36px; }
+		.reasons-lead span { color: #171717; font-size: 20px; letter-spacing: .06em; }
+		.cards-container {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 14px;
+		}
+		.reason-card {
+			display: grid;
+			grid-template-columns: 54px minmax(0, 1fr);
+			align-items: start;
+			gap: 16px;
+			margin: 0;
+			padding: 22px 20px;
+			background: rgba(255, 255, 255, .94);
+			border: 1px solid rgba(23, 23, 23, .12);
+			border-radius: 16px;
+			box-shadow: 0 10px 30px rgba(62, 51, 8, .08);
+			text-align: left;
+		}
+		.reason-icon {
+			width: 54px;
+			height: 54px;
+			display: grid;
+			place-items: center;
+			background: #fce970;
+			border: 1px solid rgba(23, 23, 23, .2);
+			border-radius: 50%;
+		}
+		.reason-icon svg {
+			width: 27px;
+			height: 27px;
+			fill: none;
+			stroke: #171717;
+			stroke-width: 1.7;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+		.reason-copy { min-width: 0; }
+		.reason-card h3 {
+			color: #171717;
+			font-size: 17px;
+			line-height: 1.45;
+			margin: 2px 0 8px;
+		}
+		.reason-card p { color: #555149; font-size: 13px; line-height: 1.8; margin: 0; }
+		.reasons-footer {
+			margin-top: 34px;
+			padding: 24px 16px 18px;
+			background: rgba(252, 233, 112, .34);
+			border: 1px solid rgba(23, 23, 23, .1);
+			border-radius: 18px;
+		}
+		.footer-badge-title { color: #171717; border-bottom-color: #171717; }
+		@media (min-width: 768px) {
+			.reasons-section { background: linear-gradient(180deg, #fce970 0, #fce970 300px, #fffdf5 300px, #fffdf5 100%); }
+			.cards-container { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+			.reason-card { display: flex; flex-direction: column; min-height: 270px; padding: 26px; }
+			.reason-card h3 { font-size: 19px; }
+			.reason-card p { font-size: 15px !important; }
 		}
 		.icon-line {
 			background: transparent;
@@ -1767,33 +1855,39 @@
             
             <div class="cards-container">
                 <div class="reason-card">
-                    <h3>スピード感のある対応</h3>
-                    <p>ご希望の開業時期から逆算し、今やることを整理。状況に応じて最短スケジュールをご提案します。</p>
+					<div class="reason-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M18 3 8 18h8l-2 11 10-16h-8z"/></svg></div>
+					<div class="reason-copy"><h3>スピード感のある対応</h3>
+                    <p>ご希望の開業時期から逆算し、今やることを整理。状況に応じて最短スケジュールをご提案します。</p></div>
                 </div>
                 
                 <div class="reason-card">
-                    <h3>融資・資金計画をサポート</h3>
-                    <p>自己資金やご希望の店舗規模を確認し、無理のない資金計画と融資準備を一緒に進めます。</p>
+					<div class="reason-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M11 9h10M11 14h10M16 9v14M12 23h8"/></svg></div>
+					<div class="reason-copy"><h3>融資・資金計画をサポート</h3>
+                    <p>自己資金やご希望の店舗規模を確認し、無理のない資金計画と融資準備を一緒に進めます。</p></div>
                 </div>
                 
                 <div class="reason-card">
-                    <h3>サロンワークと開業準備を両立</h3>
-                    <p>窓口を一本化し、業者との調整負担を軽減。働きながらでも準備を進めやすい体制を整えます。</p>
+					<div class="reason-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M10 4v6M22 4v6M5 13h22M11 20l3 3 7-7"/></svg></div>
+					<div class="reason-copy"><h3>サロンワークと開業準備を両立</h3>
+                    <p>窓口を一本化し、業者との調整負担を軽減。働きながらでも準備を進めやすい体制を整えます。</p></div>
                 </div>
                 
                 <div class="reason-card">
-                    <h3>物件を設備面から確認</h3>
-                    <p>給排水・ガス・電気容量など、サロン開業に必要な条件を確認し、契約前の判断をサポートします。</p>
+					<div class="reason-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 28V8l11-5 11 5v20M10 11h3M19 11h3M10 16h3M19 16h3M14 28v-7h4v7"/><circle cx="24" cy="22" r="4"/><path d="m27 25 3 3"/></svg></div>
+					<div class="reason-copy"><h3>物件を設備面から確認</h3>
+                    <p>給排水・ガス・電気容量など、サロン開業に必要な条件を確認し、契約前の判断をサポートします。</p></div>
                 </div>
                 
                 <div class="reason-card">
-                    <h3>予算を意識した内装工事</h3>
-                    <p>開業後の運転資金を残せるよう、優先順位を整理しながら仕様と工事費を調整します。</p>
+					<div class="reason-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="2"/><path d="M10 9h12M10 15h3M16 15h3M22 15h0M10 20h3M16 20h3M22 20h0M10 25h3M16 25h7"/></svg></div>
+					<div class="reason-copy"><h3>予算を意識した内装工事</h3>
+                    <p>開業後の運転資金を残せるよう、優先順位を整理しながら仕様と工事費を調整します。</p></div>
                 </div>
                 
                 <div class="reason-card">
-                    <h3>コンセプトを形にするデザイン</h3>
-                    <p>お客様の過ごしやすさとスタッフ動線を考えながら、サロンらしさが伝わる空間をご提案します。</p>
+					<div class="reason-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m6 25 2-7L22 4l6 6-14 14-8 1Z"/><path d="m19 7 6 6M8 18l6 6M6 25l5-2"/><path d="M24 21v6M21 24h6"/></svg></div>
+					<div class="reason-copy"><h3>コンセプトを形にするデザイン</h3>
+                    <p>お客様の過ごしやすさとスタッフ動線を考えながら、サロンらしさが伝わる空間をご提案します。</p></div>
                 </div>
             </div>
             
