@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容室専門のトータルサポート｜B-MADE(ビーメイド)</title>
+    <meta name="description" content="美容室・理容室の開業を、物件探し・融資・店舗デザイン・内装工事まで一社完結でサポート。サロンワークを続けながら理想の店舗づくりを進められます。">
+<style>
+        /* --- 基本のリセット --- */
+        * {
+            box-sizing: border-box; /* 枠線や余白を含めたサイズ計算にする */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            color: #333;
+            background-color: #ffffff; /* 全体の背景を白に設定 */
+        }
+
+        /* --- 全体を囲う枠 --- */
+        .wrapper {
+            width: 100%;
+            max-width: 500px; /* スマホで見やすい最大幅 */
+            margin: 0 auto;
+            background-color: #fff;
+            overflow: hidden; /* 横はみ出し防止 */
+        }
+
+        /* --- 新設：ヘッダーエリア（高さ250px・白背景） --- */
+        .main-header {
+            background-color: #ffffff !important; /* 背景を白に固定 */
+            height: 70px !important;             /* 高さを強制的に250pxにする */
+            display: flex !important;
+            justify-content: left;   /* ロゴを左右中央に配置 */
+            align-items: center;       /* ロゴを上下中央に配置 */
+            width: 100%;
+            margin: 0;
+            padding: 0 25px;
+            border-bottom: 1px solid #f0f0f0; /* デザインを引き締める薄い境界線（お好みで削除可） */
+        }
+
+        /* ロゴ画像のサイズ調整 */
+        .logo-container img {
+            height: 15px; /* Figmaのロゴの高さに合わせて適宜変更してください */
+            width: auto;
+            display: block;
+            margin: 20 auto;
+        }
+
+        /* --- 各セクション --- */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* 画像の基本設定 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+		/* ==========================================================
+		   ▼ 高級感（プレミアム）仕様のHEROセクション
+		========================================================== */
+		.hero {
+			position: relative;
+			width: 100%;
+			/* 背景画像（シャンプー台や内装の写真）のパスを設定してください */
+			background-image: url('images/hero-bg.jpg'); 
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 80px 20px 60px 20px;
+			box-sizing: border-box;
+			text-align: center;
+			color: #ffffff;
+			overflow: hidden;
+		}
+		
+		/* 遮光レイヤー：背景が暗くなりすぎず、写真が綺麗に見える不透明度に調整 */
+		.hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 100%);
+			z-index: 1;
+		}
+		
+		/* 中身のコンテンツを前面に出す設定 */
+		.hero > * {
+			position: relative;
+			z-index: 3;
+			max-width: 360px; /* スマホ幅で綺麗に収まるサイズ */
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		/* 1つ目のテキスト（理美容室開業したいけど…） */
+		.hero p:nth-of-type(1) {
+			line-height: 1.7;
+			letter-spacing: 1px;
+			margin-bottom: 25px;
+			color: #e0e0e0;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+	/* ==========================================================
+	   ★HEROセクション：H1・タイトル（改行対応・中央寄せ）
+	========================================================== */
+	.hero h1 {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 1.5;
+		letter-spacing: 1px;
+		margin: 20px auto 30px auto; 
+		padding-bottom: 15px;
+		position: relative;
+		text-align: center;
+		display: block;
+		
+		/* 文字色を全体的にゴールドベースにする */
+		color: #d1b26f;
+		filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+	}
+	
+	/* 2行目を強制的に白くする */
+		.hero h1 span {
+			display: block;
+			color: #ffffff;
+		}
+			
+		/* アンダーラインの装飾 */
+		.hero h1::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			height: 1.5px;
+			background: linear-gradient(to right, transparent 5%, #c5a059 20%, #c5a059 80%, transparent 95%);
+		}
+		
+	/* ==========================================================
+	   ★各要素の余白微調整（スマホでの表示崩れ防止）
+		========================================================== */
+		.hero p:nth-of-type(2) {
+			display: inline-block;
+			background: rgba(255, 255, 255, 0.08);
+			border: 1px solid rgba(212, 175, 55, 0.4);
+			padding: 8px 20px;
+			border-radius: 6px;
+			margin: 0 auto 30px auto;
+			color: #f3e7c4;
+			font-weight: 600;
+			backdrop-filter: blur(4px);
+		}
+		
+		.hero p:nth-of-type(3) {
+			margin: 0 auto 30px auto;
+			line-height: 1.8;
+			color: #ffffff;
+			text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+		}
+		
+		/* ==========================================================
+		   ★ボタンスタイル
+		========================================================== */
+		.btn-gold {
+			display: block;
+			width: 100%;
+			max-width: 290px;
+			margin: 0 auto;
+			padding: 14px 0;
+			font-size: 16px;
+			font-weight: bold;
+			color: #111111;
+			text-decoration: none;
+			background: linear-gradient(to bottom, #f5e2ab 0%, #d8b86d 30%, #bd9649 70%, #916924 100%);
+			border-radius: 35px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 1.5px 0 rgba(255, 255, 255, 0.5);
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+		
+		.btn-gold:active {
+			transform: scale(0.97);
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+		}
+		
+		/* ==========================================================
+		   ★アニメーション
+		========================================================== */
+		.fade-in-up {
+			opacity: 0;
+			animation: fadeInUpAnim 0.8s ease forwards;
+			animation-delay: var(--delay);
+		}
+		
+		@keyframes fadeInUpAnim {
+			0% { opacity: 0; transform: translateY(20px); }
+			100% { opacity: 1; transform: translateY(0); }
+		}
+		
+		
+		
+				
+		/* 実績セクション全体の背景（Figmaに合わせて薄いグレーに） */
+		.results {
+			background-color: #f5f5f5;
+			padding: 50px 20px;
+			overflow: hidden; /* 横からのスライドではみ出さないように */
+		}
+		
+		/* ★追加：3つの実績メダル画像を横並びにする親コンテナ */
+		.stats-container {
+			display: flex;            /* ★これで縦並びから横並びに変わります */
+			justify-content: center;  /* 横方向の中央寄せ */
+			align-items: flex-start;  /* 上揃え */
+			gap: 10px;                /* メダル同士の間のすき間（Figmaの余白感） */
+			width: 100%;
+			max-width: 350px;         /* スマホの画面幅に収まるサイズに制限 */
+			margin: 30px auto 0 auto; /* 上下に余白を作りつつ、コンテナ自体を中央寄せ */
+			box-sizing: border-box;
+		}	
+		
+			
+		/* --- 実績テキスト（横から） --- */
+		.slide-in-left {
+			opacity: 0;
+			transform: translateX(-50px);
+			transition: transform 1s ease, opacity 1s ease;
+		}
+		/* スクロールして見えたら動く */
+		.slide-in-left.show {
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+		/* ★@keyframesによるanimationを削除し、一貫性のあるtransitionに変更します */
+		.fade-up-stat {
+			flex: 1;                  /* ★3つの要素が均等な横幅（3分割）になるように指定 */
+			max-width: 100px;         /* 画像が大きくなりすぎないようにストッパーをかける */
+			opacity: 0;
+			transform: translateY(30px); /* 下に30pxずらしておく */
+			transition: transform 0.8s ease, opacity 0.8s ease;
+		}
+		
+		/* ★JSで「.show」がついた時に、HTML側の「--delay」に従って順番にフェードイン */
+		.fade-up-stat.show {
+			opacity: 1;
+			transform: translateY(0);
+			transition-delay: var(--delay); /* HTMLに書いた0.2sや0.5sがここで生きます */
+		}
+		
+		.fade-up-stat img {
+			width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+		
+		
+
+
+		/* --- チェックリストセクション全体の背景（方眼紙風のデザイン） --- */
+		.checklist-section {
+			background-image: 
+				linear-gradient(#e0e7e9 1px, transparent 1px),
+				linear-gradient(90deg, #e0e7e9 1px, transparent 1px);
+			background-size: 20px 20px;
+			background-color: #ffffff;
+			padding: 50px 20px;
+			text-align: center;
+		}
+		
+		/* チェックリストを包む白い箱（親） */
+		.checklist {
+			background-color: #fff;
+			border: 1px solid #eee;
+			padding: 30px 20px;
+			border-radius: 8px;
+			margin: 30px auto;
+			max-width: 400px;
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+		
+			/* 最初は透明、少し下においておく */
+			opacity: 0;
+			transform: translateY(30px);
+			/* 白い箱自体は0.6秒かけてスムーズに出現 */
+			transition: transform 0.6s ease, opacity 0.6s ease; 
+		}
+		
+		/* ★JSで「.show」クラスがついたら白い箱を表示する */
+		.checklist.show {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+
+		/* --- 中のリスト項目（子：専用クラスに変更） --- */
+		.checklist .checklist-item {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			font-size: 15px;
+			color: #333;
+			
+			/* 最初は透明、少し下に下げて隠しておく */
+			opacity: 0;
+			transform: translateY(15px);
+			/* リスト項目の出現スピード（0.4秒かけてサッと出る） */
+			transition: transform 0.4s ease, opacity 0.4s ease;
+		}
+		
+		/* ★ここが解決の鍵：箱（.checklist）に .show がついたら、中身を時間差で動かす */
+		.checklist.show .checklist-item {
+			opacity: 1;
+			transform: translateY(0);
+			
+			/* 箱の出現（0.6s）を少し待ってから、HTML側のディレイを適用させる */
+			/* 同時感をなくすため、安全策として少し長めの「+ 0.5s」にするのがおすすめです！ */
+			transition-delay: calc(var(--delay) + 0.5s); 
+		}
+		
+		/* 最後の項目の下マージンをリセット */
+		.checklist .checklist-item:last-child {
+			margin-bottom: 0;
+		}
+		
+		/* チェックボックス画像の設定 */
+		.check-icon {
+			width: 20px;
+			height: auto;
+			margin-right: 15px;
+			flex-shrink: 0; /* 画像が潰れないように固定 */
+		}
+		
+		/* チェックボックス画像の設定 */
+		.check-icon {
+			width: 20px;
+			height: auto;
+			margin-right: 15px;
+			flex-shrink: 0;
+		}
+		
+		
+		
+		
+		/* 1. 選ばれる理由セクションの底上げ（余白作成） */
+		.reasons-section {
+			background-color: #0a0a0a;
+			padding: 60px 20px 80px 20px; /* 下部に80pxの余白を確保 */
+			color: #ffffff;
+			margin-bottom: 0; /* 重なり防止 */
+		}
+		
+		/* 2. 実績統計部分（フッターバッジ）との距離調整 */
+		.reasons-footer {
+			margin-top: 60px; /* カード群と実績メダルの間を広げる */
+			padding-bottom: 20px;
+		}
+				
+		.reasons-inner {
+			max-width: 450px;
+			margin: 0 auto;
+			text-align: center;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between; /* 縦の要素を綺麗に等間隔に配置 */
+		}
+		
+		.reasons-title {
+			font-size: 22px;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 0 0 10px 0;
+		}
+		
+		.reasons-lead {
+			font-size: 13px;
+			color: #ffffff; /* 白に変更 */
+			line-height: 1.5;
+			margin: 0 0 20px 0;
+		}
+		
+		.reasons-lead span {
+			font-size: 18px;
+			font-weight: bold;
+			color: #dfb76c; /* ゴールド（必要に応じて #ffffff に変更可） */
+			display: block;
+			margin-top: 5px;
+		}
+		
+		/* カード全体のコンテナ */
+		.cards-container {
+			display: flex;
+			flex-direction: column;
+			gap: 12px; /* カード同士の隙間 */
+		}
+		
+		/* カードのデザイン */
+		.reason-card {
+			background: #1a1a1a; /* カードは少しだけ明るい黒 */
+			border-radius: 8px;
+			padding: 24px;
+			margin-bottom: 20px;
+			/* 枠線をゴールドに設定 */
+			border: 1px solid #c5a059; 
+			/* 影を薄くして、枠線のゴールドを際立たせる */
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+		}
+		
+		/* カード内のタイトル */
+		.reason-card h3 {
+			color: #dfb76c; /* タイトルもゴールドにすると統一感アップ */
+			margin-bottom: 12px;
+		}
+				
+		/* カード内の説明文 */
+		.reason-card p {
+			color: #cccccc; /* 文字は白ではなく少しグレーにすると可読性が上がる */
+			line-height: 1.7;
+		}
+		
+		/* 下部実績エリア */
+		.reasons-footer {
+			margin-top: auto; /* 一番下に張り付くように配置 */
+			padding-top: 15px;
+		}
+		
+		.footer-badge-title {
+			font-size: 13px;
+			font-weight: bold;
+			color: #dfb76c;
+			border-bottom: 1px solid #dfb76c;
+			display: inline-block;
+			padding-bottom: 3px;
+			margin: 0 0 15px 0;
+		}
+		
+		.reasons-stats {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-end;
+			padding-bottom: 10px;
+		}
+		
+		.stat-item {
+			width: 28%; /* 3つが綺麗に横並びになるサイズ */
+		}
+		
+		.stat-item img {
+			width: 100%;
+			height: auto;
+		}
+
+
+
+
+		/* --- 開業までの8STEPセクション --- */
+		.step-section {
+			/* 背景画像だけを敷いて、文字は上に乗せる */
+			background-image: url('images/step-bg.jpg');
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 1068px; /* ご指定の高さ */
+			padding: 30px 20px;
+			box-sizing: border-box;
+			position: relative;
+		}
+		
+		/* 背景にうっすら白いモヤをかけて文字を読みやすくする場合（必要に応じて） */
+		.step-section::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; width: 100%; height: 100%;
+			background-color: rgba(255, 255, 255, 0.4);
+			z-index: 1;
+		}
+		
+		.step-inner {
+			position: relative;
+			z-index: 2; /* 背景より前に出す */
+			max-width: 450px;
+			margin: 0 auto;
+			text-align: center;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		
+		.step-main-title {
+			font-size: 22px;
+			font-weight: bold;
+			color: #333;
+			margin: 0;
+		}
+		
+		.step-dots {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 4px;
+			margin: 5px 0;
+		}
+		.step-dots span {
+			width: 4px;
+			height: 4px;
+			background-color: #333;
+			border-radius: 50%;
+		}
+		
+		/* 【★Figma再現】中央の白いボックス */
+		.step-white-box {
+			background-color: #ffffff;
+			width: 340px;      /* Figma通り */
+			height: 765px;     /* Figma通り */
+			margin: 0 auto;
+			border-radius: 0px; /* 直角デザイン */
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); /* ドロップシャドウ再現 */
+			padding: 20px 15px;
+			box-sizing: border-box;
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between; /* 8個のSTEPを縦いっぱいに等間隔配置 */
+			position: relative;
+		}
+		
+		/* STEP同士を繋ぐ左側の細い縦線 */
+		.step-white-box::before {
+			content: '';
+			position: absolute;
+			top: 40px;
+			bottom: 40px;
+			left: 31px; /* 黄色丸の中心を通る位置 */
+			width: 1px;
+			background-color: #333;
+			z-index: 1;
+		}
+		
+		/* 各STEPの並び */
+		.timeline-item {
+			display: flex;
+			align-items: flex-start;
+			position: relative;
+			z-index: 2;
+			margin-bottom: 0; /* flexのspace-betweenに任せる */
+		}
+		
+		/* 黄色のSTEP丸バッジ */
+		.step-badge {
+			background-color: #fff152; /* 明るい黄色 */
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: 8px;
+			font-weight: bold;
+			color: #333;
+			line-height: 1.1;
+			flex-shrink: 0;
+			margin-right: 15px;
+		}
+		.step-badge span {
+			font-size: 11px;
+			display: block;
+		}
+		
+		/* テキストコンテンツ */
+		.timeline-content {
+			flex: 1;
+		}
+		
+		.timeline-content h3 {
+			font-size: 13px;
+			font-weight: bold;
+			color: #333;
+			margin: 0 0 3px 0;
+			line-height: 1.3;
+		}
+		
+		.timeline-content p {
+			font-size: 10px;
+			color: #555;
+			line-height: 1.4;
+			margin: 0;
+		}
+		
+		/* ★ボックス内のLINE友達追加ボタン */
+		.line-add-btn {
+			display: inline-block;
+			background-color: #72c35b;
+			color: #ffffff;
+			font-size: 11px;
+			font-weight: bold;
+			text-decoration: none;
+			padding: 4px 35px;
+			border-radius: 12px;
+			margin-top: 4px;
+			text-align: center;
+		}
+		
+		/* 下部エリア */
+		.step-footer {
+			margin-top: auto;
+		}
+		
+		.step-footer-text {
+			font-size: 12px;
+			font-weight: bold;
+			color: #333;
+			border-bottom: 1px solid #333;
+			display: inline-block;
+			padding-bottom: 2px;
+			margin: 5px 0 10px 0;
+		}
+		
+		.step-note {
+			font-size: 11px;
+			color: #333;
+			margin: 5px 0 0 0;
+		}
+
+
+		/* --- WORKS（施工事例）セクション --- */
+		.works-section {
+			background-color: #ffffff;
+			width: 100%;
+			height: 567px;
+			padding: 40px 0;
+			box-sizing: border-box;
+			overflow: hidden;
+			/* ★ここを変更：PCで見た時だけ背景画像で隙間を埋める */
+			background-image: linear-gradient(to right, #ffffff, #ffffff);
+			background-repeat: repeat-x;
+		}
+		
+		.works-inner {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;
+		}
+		
+		.works-main-title {
+			font-size: 24px;
+			font-weight: normal;
+			letter-spacing: 2px;
+			color: #333;
+			margin: 0;
+		}
+		
+		.works-dots {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 4px;
+			margin: 5px 0;
+		}
+		.works-dots span {
+			width: 4px;
+			height: 4px;
+			background-color: #ccc;
+			border-radius: 50%;
+		}
+		
+		.works-lead {
+			font-size: 13px;
+			color: #333;
+			line-height: 1.6;
+			margin: 0 0 30px 0;
+			padding: 0 20px;
+		}
+		
+		/* 2段スライダーの土台（ここで上下の間隔を30pxに指定） */
+		.works-double-slider {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			width: 100%;
+			overflow: hidden;
+			margin: 10px 0;
+		}
+		
+		.slider-row {
+			width: 100%;
+			overflow: hidden;
+		}
+		
+		/* 横一列のトラック設定 */
+		.works-slider-track {
+			display: flex;
+			width: calc((196px + 12px) * 4); /* (画像幅 + 隙間) × 4枚分 */
+			gap: 12px; /* 画像同士の横の隙間 */
+		}
+				
+		/* 各画像カードのサイズ（Figma通り） */
+		.works-item {
+			width: 196px;
+			height: 131px;
+			position: relative;
+			flex-shrink: 0;
+		}
+				
+		.works-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		/* 画像の上の半透明帯 */
+		.works-overlay {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.65);
+			padding: 6px 0;
+			text-align: center;
+		}
+		
+		.works-overlay span {
+			font-size: 13px;
+			color: #333;
+			line-height: 1.3;
+			display: block;
+		}
+		
+		/* 下部ボタン */
+		.works-footer {
+			padding-bottom: 10px;
+		}
+		
+		.btn-works-check {
+			display: inline-block;
+			background-color: #e0e0e0;
+			color: #333;
+			font-size: 13px;
+			text-decoration: none;
+			padding: 6px 30px;
+			border-radius: 15px;
+		}
+		
+		/* --- 左右別の無限ループアニメーション設定 --- */
+		
+		/* 上段：左へ流れる（2枚分動いたらリセット） */
+		.row-left .works-slider-track {
+			animation: scroll-to-left 14s linear infinite;
+		}
+		@keyframes scroll-to-left {
+			0% { transform: translateX(0); }
+			100% { transform: translateX(calc(-1 * (196px + 12px) * 2)); }
+		}
+		
+		/* 下段：右へ流れる（最初はマイナス位置からスタートして0へ戻る） */
+		.row-right .works-slider-track {
+			animation: scroll-to-right 14s linear infinite;
+		}
+		@keyframes scroll-to-right {
+			0% { transform: translateX(calc(-1 * (196px + 12px) * 2)); }
+			100% { transform: translateX(0); }
+		}
+		
+		/* --- WORKSスライダーのリンク化調整 --- */
+		
+		/* 1. リンク化してもスライダーの要素として正しく並ぶようにブロック化 */
+		.works-item {
+			display: block;
+			text-decoration: none; /* テキストの下線を消す */
+			overflow: hidden;
+			position: relative;
+			cursor: pointer;
+			transition: opacity 0.2s ease, transform 0.2s ease;
+		}
+		
+		/* 2. スマホでタップされたとき・PCでホバーしたときに少しだけ沈み、明るくする（リンクと判別しやすくするため） */
+		.works-item:active,
+		.works-item:hover {
+			opacity: 0.9;
+			transform: scale(0.98);
+		}
+		
+		/* 3. 画像がリンクの枠線いっぱいにきれいに収まるように調整 */
+		.works-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+
+
+
+
+
+		/* --- VOICE（オーナー様の声）セクション --- */
+		.voice-section {
+			background-color: #ffffff;
+			width: 100%;
+			height: 782px; /* ★Figma指定の高さ */
+			padding: 50px 20px;
+			box-sizing: border-box;
+		}
+		
+		.voice-inner {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between; /* 上・中・下を等間隔で綺麗に配置 */
+			text-align: center;
+		}
+		
+		/* タイトル部分 */
+		.voice-main-title {
+			font-size: 36px; /* Figmaの大文字に合わせた存在感のあるサイズ */
+			font-weight: normal;
+			letter-spacing: 2px;
+			color: #333333;
+			margin: 0 0 10px 0;
+		}
+		
+		.voice-sub-title {
+			font-size: 16px;
+			color: #333333;
+			line-height: 1.5;
+			margin: 0;
+		}
+		
+		/* サムネイルエリア */
+		.voice-video-container {
+			display: flex;
+			flex-direction: column;
+			gap: 20px; /* サムネイル同士の上下の隙間 */
+			align-items: center;
+		}
+		
+		.voice-video-card {
+			display: block;
+			width: 100%;
+			max-width: 340px; /* スマホ画面に綺麗に収まる横幅 */
+			border-radius: 0px; /* Figma通りの直角デザイン */
+			overflow: hidden;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* 軽めのシャドウで立体感をプラス */
+			transition: transform 0.2s ease;
+		}
+		
+		/* タップした時に少し沈む心地よいエフェクト */
+		.voice-video-card:active {
+			transform: scale(0.98);
+		}
+		
+		.voice-video-card img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* 下部エリア */
+		.voice-link-text {
+			font-size: 12px;
+			color: #333333;
+			border-bottom: 1px solid #333333; /* ★Figmaのテキスト下線を再現 */
+			display: inline-block;
+			padding-bottom: 2px;
+			margin: 0 0 15px 0;
+		}
+		
+		/* ★Figma完全再現：赤いYOUTUBE CHECKボタン */
+		.btn-youtube-check {
+			display: block;
+			background-color: #ff4b4b; /* 鮮やかなYouTubeレッド */
+			color: #ffffff;
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			text-decoration: none;
+			width: 100%;
+			max-width: 280px; /* ボタンの横幅 */
+			margin: 0 auto;
+			padding: 14px 0;
+			border-radius: 8px; /* Figmaの角丸 */
+			text-align: center;
+			box-shadow: 0 4px 12px rgba(255, 75, 75, 0.3); /* 赤いボタンが引き立つシャドウ */
+			transition: background-color 0.2s ease;
+		}
+		
+		.btn-youtube-check:active {
+			background-color: #e03e3e; /* タップされた時に少し暗くしてフィードバック */
+		}
+		
+		.voice-note {
+			font-size: 11px;
+			color: #333333;
+			margin: 12px 0 0 0;
+		}
+
+
+		/* --- SNS & FOOTER セクション --- */
+		.footer-section {
+			background-color: #f7f7f7; /* 背景の薄いグレー（Figmaのベース色に調整してください） */
+			width: 100%;
+			height: 468px; /* ★Figma指定の高さ */
+			padding: 30px 20px 15px 20px;
+			box-sizing: border-box;
+			position: relative;
+		}
+		
+		.footer-inner {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between; /* 上下の要素をH468の中で綺麗に分散配置 */
+			align-items: center;
+			text-align: center;
+		}
+		
+		/* SNS白ボックスデザイン */
+		.sns-white-box {
+			background-color: #ffffff;
+			width: 100%;
+			max-width: 340px; /* スマホ画面に収まる幅 */
+			padding: 25px 20px;
+			border-radius: 16px; /* 美しい角丸 */
+			box-sizing: border-box;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); /* ふんわりとしたドロップシャドウ */
+		}
+		
+		/* アイコンを3つ横並びにする */
+		.sns-icons-row {
+			display: flex;
+			justify-content: center;
+			gap: 20px; /* アイコン同士の間隔 */
+			margin-bottom: 15px;
+		}
+		
+		/* ★Figma指定のサイズ W84×H84 に固定 */
+		.sns-icon-link {
+			display: block;
+			width: 84px;
+			height: 84px;
+			transition: transform 0.2s ease;
+		}
+		
+		.sns-icon-link:active {
+			transform: scale(0.95); /* タップした時の心地よいフィードバック */
+		}
+		
+		.sns-icon-link img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		
+		.sns-box-title {
+			font-size: 15px;
+			color: #333333;
+			font-weight: bold;
+			line-height: 1.4;
+			margin: 0;
+		}
+		
+		/* 会社情報エリア */
+		.company-info-area {
+			margin-top: 10px;
+		}
+		
+		.company-logo-text {
+			font-size: 22px;
+			font-weight: normal;
+			letter-spacing: 1px;
+			color: #333333;
+			margin: 0;
+		}
+		
+		.company-kana {
+			font-size: 10px;
+			color: #666666;
+			margin: 2px 0 8px 0;
+			letter-spacing: 1px;
+		}
+		
+		.company-address {
+			font-style: normal;
+			font-size: 12px;
+			color: #333333;
+			line-height: 1.6;
+			margin-bottom: 8px;
+		}
+		
+		.company-license {
+			font-size: 11px;
+			color: #333333;
+			margin: 0;
+		}
+		
+		/* コピーライト */
+		.copyright {
+			font-size: 10px;
+			color: #666666;
+			margin: 0;
+		}
+
+
+
+
+
+
+
+        /* --- 重要！CTAボタン --- */
+        .btn-cta {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 0 #388E3C; /* 押しボタン風の立体感 */
+            margin: 20px 0;
+        }
+		
+		/* --- ボタンのアニメーション（鼓動のような動き） --- */
+		.btn-animation {
+			display: block;
+			width: 100%;
+			text-align: center;
+			transition: transform 0.3s ease; /* ホバー時の動きを滑らかに */
+			
+			/* アニメーションの実行設定 */
+			animation: pulse-animation 1s infinite ease-in-out; 
+		}
+		
+		/* 2秒ごとに少し大きくなって戻る命令 */
+		@keyframes pulse-animation {
+			0% {
+				transform: scale(1); /* 通常サイズ */
+			}
+			50% {
+				transform: scale(1.03); /* 1.05倍に少し大きく */
+			}
+			100% {
+				transform: scale(1); /* 元に戻る */
+			}
+		}
+		
+		/* ボタンを触った時にアニメーションを止めて少し沈ませる（クリック感） */
+		.btn-animation:active {
+			transform: scale(0.98);
+			box-shadow: none;
+		}
+
+        /* --- フッター --- */
+        footer {
+            background-color: #eee;
+            padding: 30px 15px;
+            font-size: 12px;
+            color: #666;
+        }
+		
+		/* 会社情報エリア */
+		.company-info-area {
+			margin-top: 10px;
+		}
+		
+		/* ★ロゴ画像用のスタイル設定（Figmaの横幅に合わせて調整してください） */
+		.company-logo {
+			width: 100px; /* ★FigmaのW:100pxに合わせて指定 */
+			height: auto;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.company-logo img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		.company-kana {
+			font-size: 10px;
+			color: #666666;
+			margin: 6px 0 8px 0; /* ロゴの下の隙間を少し広めに微調整 */
+			letter-spacing: 1px;
+		}
+		
+		/* フッターナビの整列 */
+		.footer-nav {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin: 20px 0;
+		}
+		
+		.footer-nav a {
+			color: #333;
+			text-decoration: none;
+			font-size: 13px;
+			padding: 0 10px;
+			border-right: 1px solid #333;
+		}
+		
+		.footer-nav a:last-child {
+			border-right: none;
+		}
+		
+		/* スマホ用：縦並びに切り替え */
+		@media (max-width: 600px) {
+			.footer-nav {
+				flex-direction: column;
+				align-items: center;
+				gap: 15px;
+			}
+			.footer-nav a {
+				border-right: none;
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 5px;
+				width: auto;
+			}
+		}
+		
+		
+		
+		/* --- スライダー全体の枠 --- */
+		.infiniteslider {
+			overflow: hidden; /* はみ出た画像を隠す */
+			width: 100%;
+			height: 100px;    /* 画像の高さを100pxに固定 */
+			background-color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+		
+		/* --- 画像を横に並べて動かす箱 --- */
+		.infiniteslider-inner {
+			display: flex !important;   /* 横並びにする */
+			flex-wrap: nowrap !important; /* 折り返しを禁止 */
+			width: 600%;                /* 十分な横幅を確保 */
+			height: 100%;
+			animation: loop-animation 30s linear infinite; /* 30秒で1周、無限ループ */
+		}
+		
+		/* --- 各画像のサイズ調整 --- */
+		.slide-item {
+			width: calc(100% / 12); /* 12枚あるので12分割 */
+			height: 100%;
+			padding: 0 px;        /* 画像同士の隙間 */
+		}
+		
+		.slide-item img {
+			width: 100%;
+			height: 100% !important;
+			object-fit: cover;     /* 高さに合わせてきれいに切り抜き */
+		}
+		
+		/* --- 無限ループアニメーションの命令 --- */
+		@keyframes loop-animation {
+			0% { transform: translateX(0); }
+			100% { transform: translateX(-50%); } /* 半分まで行ったら最初に戻る */
+		}
+		
+		
+		
+		
+		
+		/* 追従ボタンの枠組み */
+		.floating-button-container {
+			position: fixed; /* ★ここが「追従」させるための最も重要な指定です */
+			bottom: 0;       /* 画面の一番下に配置 */
+			left: 0;
+			width: 100%;     /* 画面幅いっぱいにする */
+			display: flex;   /* ボタンを横並びにする */
+			z-index: 9999;   /* ★他のコンテンツよりも必ず「一番手前」に表示させる設定 */
+		}
+		
+		/* ボタン共通のデザイン */
+		.float-btn {
+			flex: 1;         /* 幅を50%ずつ均等に分ける */
+			text-align: center;
+			padding: 16px 10px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 20px 20px 0 0; /* 画像のように上部の左右だけ角丸にする */
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			line-height: 1.2;
+		}
+		
+		/* 緑ボタン専用の指定 */
+		.float-btn-green {
+			background-color: #55a88c; /* 画像に近い落ち着いた緑 */
+			color: #ffffff;
+		}
+		
+		/* 黄色ボタン専用の指定 */
+		.float-btn-yellow {
+			background-color: #fce24b; /* 画像に近い明るい黄色 */
+			color: #333333; /* 背景が明るいので、文字は黒系にして読みやすく */
+		}
+		
+		/* LINEのダミーアイコン（画像があれば img タグに差し替えてください） */
+		.icon-line {
+			background-color: #ffffff;
+			color: #55a88c;
+			font-size: 10px;
+			padding: 2px 8px;
+			border-radius: 10px;
+			margin-bottom: 4px;
+		}
+		
+		/* =======================================
+		   【要注意】コンテンツが隠れないようにするための余白
+		   ======================================= */
+		body {
+			padding-bottom: 80px; /* ボタンの高さ分、ページの最後に余白を作る */
+		}
+		
+		
+		
+		/* ==========================================================
+		   ▼ PC・タブレット対応（768px以上）
+		   末尾に追加してください
+		========================================================== */
+	
+		@media (min-width: 768px) {
+			/* 1. 枠の固定幅を解除し、画面いっぱい（100%）に広げる */
+			.wrapper {
+				max-width: 100% !important;
+				width: 100% !important;
+			}
+		
+			/* 2. 各セクションの高さを自動化し、中央揃えにする */
+			.hero, .results, .checklist-section, .reasons-section, .step-section, .works-section, .voice-section, .footer-section {
+				height: auto !important;
+				padding: 8vw 4vw !important;
+				text-align: center !important; /* 全体的に中央揃えをベースにする */
+			}
+		
+			/* 3. 【修正】Heroセクションの文字が縦に潰れる問題を解消 */
+			.hero h1, .hero p, .hero div {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			
+			.hero h1 { font-size: clamp(28px, 5vw, 60px) !important; margin-bottom: 4vw !important; }
+			.hero p { font-size: clamp(16px, 2.5vw, 30px) !important; }
+			
+			/* 【修正】チェックリストのH2（HTMLの直書き設定）を上書きして大きく */
+			.reasons-title, .step-main-title, .works-main-title, .voice-main-title, .checklist-section h2 {
+				font-size: clamp(28px, 4vw, 50px) !important;
+				margin-bottom: 4vw !important;
+			}
+			
+			/* テキスト全体の設定（広がりすぎないように最大幅を設定） */
+			p, .checklist-item, .timeline-content p, .reason-card p, .results p {
+				font-size: clamp(16px, 2vw, 24px) !important;
+				line-height: 1.8 !important;
+				max-width: 900px !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+		
+			/* 【修正】一社完結型サポートの画像を大きくして中央へ */
+			.slide-in-left img {
+				width: clamp(300px, 40vw, 600px) !important;
+				height: auto !important;
+				margin: 4vw auto !important;
+				display: block !important;
+			}
+		
+			/* 4. 【修正】各種ボタンの拡大と「完全な中央配置」 */
+			.btn-gold, .btn-cta, .btn-youtube-check {
+				display: block !important; /* 中央配置を効かせるためブロック要素化 */
+				max-width: clamp(300px, 50vw, 600px) !important; /* 画面幅の50%（最大600px）まで拡大 */
+				font-size: clamp(20px, 3vw, 36px) !important;
+				padding: 2.5vw 0 !important;
+				border-radius: 5vw !important;
+				margin: 4vw auto !important; /* 上下余白を取りつつ左右中央配置 */
+				text-align: center !important;
+			}
+				
+			/* ==========================================================
+			   ▼ お悩みチェックリスト：アイコン左マージン強制リセット版
+			   ========================================================== */
+			
+			/* ① リストの大枠を中央に */
+			.checklist.show {
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				width: 100% !important;
+			}
+			
+			/* ② 各項目のブロック（中身は左寄せにしつつ、箱自体を中央に置く） */
+			.checklist.show .checklist-item {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: flex-start !important; /* 中身は絶対に左端からスタート */
+				width: 100% !important;
+				max-width: 450px !important;            /* ★ここを文字幅ギリギリにすると一番綺麗に中央に見えます */
+				margin: 0 auto 20px auto !important;    /* 箱ごと中央に配置 */
+			}
+			
+			/* ③ アイコンの余白を強制リセット（犯人はここ！） */
+			.checklist.show .checklist-item img.check-icon {
+				margin: 0 15px 0 0 !important; /* 上0、右15px、下0、左0（左マージンを絶対に0にする！） */
+				flex-shrink: 0 !important;
+				width: 35px !important;        /* スクショのサイズに合わせて微調整 */
+				height: auto !important;
+			}
+						/* ==========================================================
+			   ▼ STEPセクション専用：高さの被りバグ修正＆中央配置（PC用）
+			   ========================================================== */
+			@media (min-width: 768px) {
+				/* 1. 外枠セクションの固定高さを解除し、中身の長さに合わせて自動伸縮させる */
+				.step-section {
+					height: auto !important;       /* スマホ用の固定高さを解除 */
+					padding: 100px 0 !important;   /* PCで見栄えが良いように上下にしっかり余白を作る */
+				}
+			
+				/* 2. 元のCSS（492行目）の「height: 100%」を解除し、幅を広げて中央寄せ */
+				.step-inner {
+					max-width: 900px !important;   /* 潰れていた幅を900pxまで拡張 */
+					width: 100% !important;
+					height: auto !important;       /* height: 100% を上書き解除して自動にする */
+					margin: 0 auto !important;     /* 左右均等に余白を取って真ん中へ */
+					display: flex !important;
+					flex-direction: column !important;
+					align-items: center !important;
+					text-align: center !important;
+				}
+			
+				/* 3. 白いボックスも広がった親要素に合わせて横幅を確保 */
+				.step-white-box {
+					width: 100% !important;
+					max-width: 850px !important;  /* 白い箱のサイズをPC用に最適化 */
+					margin: 0 auto !important;
+					height: auto !important;         /* ← 追加！ */
+       				padding-bottom: 50px !important; /* ← 追加！ */
+				}
+			
+				/* 4. LINE登録ボタンを大きくして中央へ */
+				.line-add-btn {
+					display: block !important;
+					width: max-content !important;
+					min-width: 320px !important;   /* ボタンの横幅を固定 */
+					font-size: 20px !important;    /* 文字を大きく */
+					padding: 14px 40px !important; /* ボタンを押しやすい太さに */
+					margin: 20px auto 0 !important;/* 確実にボタンを中央配置 */
+					text-align: center !important;
+				}
+				
+				/* 6. 各ステップの縦の間隔（余白）を広げる */
+				.timeline-item {
+					margin-bottom: 40px !important; /* ★ここの数値で間隔を調整できます（30px、50pxなどお好みで） */
+				}
+			
+				/* 最後のステップ（STEP08）の下は余分な間隔を空けない */
+				.timeline-item:last-child {
+					margin-bottom: 20 !important;
+				}
+				
+				.step-white-box::before {
+				left: 50px !important; /* ★ここの数値を変えると線が左右に動きます */
+			}
+
+			} /* ←ここでPC用の設定を一度きれいに閉じます */
+			
+			
+			/* ==========================================================
+			   ▼ その他のボックス・アイコン・文字の共通中央配置
+			   ========================================================== */
+			/* その他のボックスやカードの中央配置 */
+			.checklist {
+				max-width: 60vw !important;
+				padding: 4vw !important;
+				margin: 0 auto 4vw !important;
+			}
+			.reasons-inner { max-width: 70vw !important; margin: 0 auto !important; }
+			.voice-video-card, .sns-white-box { max-width: 50vw !important; margin: 0 auto !important; }
+			
+			/* 6. アイコンや数字バッジの拡大 */
+			.step-badge {
+				width: clamp(50px, 8vw, 100px) !important;
+				height: clamp(50px, 8vw, 100px) !important;
+				font-size: clamp(14px, 2.5vw, 28px) !important;
+				margin: 0 auto 2vw !important;
+			}
+			.step-badge span { font-size: clamp(16px, 3vw, 36px) !important; }
+			.check-icon { width: clamp(25px, 3.5vw, 50px) !important; margin-right: 2vw !important; }
+			.sns-icon-link {
+				width: clamp(80px, 10vw, 120px) !important;
+				height: clamp(80px, 10vw, 120px) !important;
+			}
+			
+			/* タイムライン内の文字を中央に */
+			.timeline-content { text-align: center !important; width: 100% !important; }
+			.timeline-content h3 { font-size: clamp(20px, 2.5vw, 32px) !important; margin-bottom: 2vw !important; }
+			
+			
+			
+		
+			/* ==========================================================
+			   WORKS（スライダー）のPC専用拡大設定
+			========================================================== */
+			.works-inner {
+				max-width: 1000px !important;
+				margin: 0 auto !important;
+			}
+			.works-item {
+				width: 320px !important;  
+				height: 214px !important; 
+			}
+			.works-slider-track {
+				gap: 20px !important;
+				width: calc((320px + 20px) * 4) !important;
+			}
+			
+			.row-left .works-slider-track { animation: scroll-to-left-pc 20s linear infinite !important; }
+			.row-right .works-slider-track { animation: scroll-to-right-pc 20s linear infinite !important; }
+		}
+
+		/* 2026 comprehensive refinement */
+		:root {
+			--ink: #171717;
+			--muted: #66625c;
+			--gold: #b68a3a;
+			--gold-light: #ead6a4;
+			--line: #e7e2d9;
+			--soft: #f7f5f0;
+			--line-green: #06c755;
+		}
+		html { scroll-behavior: smooth; }
+		body { color: var(--ink); line-height: 1.8; padding-bottom: 76px; }
+		.main-header { height: 64px !important; padding: 0 24px; }
+		.logo-container img { height: 18px; margin: 0; }
+		section { padding: 64px 22px; }
+		.hero { min-height: 610px; display: flex; flex-direction: column; justify-content: center; padding: 84px 24px 72px; }
+		.hero::before { background: linear-gradient(180deg, rgba(0,0,0,.58), rgba(0,0,0,.38) 50%, rgba(0,0,0,.68)); }
+		.hero h1 { font-size: clamp(27px, 7vw, 38px); line-height: 1.45; margin: 16px auto 24px; }
+		.hero p:nth-of-type(1) { margin-bottom: 14px; }
+		.hero p:nth-of-type(2) { font-size: 14px !important; margin-bottom: 22px; }
+		.hero p:nth-of-type(3) { font-size: 16px !important; line-height: 1.8; }
+		.hero-cta-area { width: 100%; }
+		.btn-gold, .btn-cta, .line-add-btn {
+			min-height: 56px; display: flex; align-items: center; justify-content: center;
+			border-radius: 999px; font-size: 16px; letter-spacing: .04em;
+			box-shadow: 0 8px 24px rgba(0,0,0,.18); text-decoration: none;
+		}
+		.btn-cta { max-width: 360px; margin: 24px auto; background: var(--line-green) !important; box-shadow: 0 8px 22px rgba(6,199,85,.24); }
+		.btn-animation { animation-duration: 2.2s; }
+		.results { background: var(--soft); }
+		.results h2, .checklist-section h2 { font-size: 24px !important; line-height: 1.5; }
+		.results p { line-height: 1.9; }
+		.checklist-section { background: #fff; }
+		.checklist { border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 14px 40px rgba(0,0,0,.06); }
+		.checklist-item { text-align: left; }
+		.reason-card { border: 1px solid rgba(182,138,58,.22); box-shadow: 0 10px 28px rgba(0,0,0,.06); }
+		.reason-card h3 { line-height: 1.5; }
+		.reason-card p { color: #4b4945; }
+		.timeline-content h3 { line-height: 1.5; }
+		.timeline-content p { color: #55514b; }
+		.works-item img, .voice-video-card img { transition: transform .45s ease; }
+		.works-item:hover img, .voice-video-card:hover img { transform: scale(1.035); }
+		.footer-nav a { line-height: 1.7; }
+		.floating-button-container { left: 50%; transform: translateX(-50%); max-width: 500px; gap: 8px; padding: 8px 10px max(8px, env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); box-shadow: 0 -5px 24px rgba(0,0,0,.12); }
+		.float-btn { min-height: 58px; padding: 9px 8px; border-radius: 12px; font-size: 14px; }
+		.float-btn-green { background: #287a65; }
+		.float-btn-yellow { background: var(--line-green); color: #fff; }
+		.icon-line { color: #168b45; }
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+		}
+		@media (min-width: 768px) {
+			body { padding-bottom: 0; }
+			.main-header { height: 76px !important; padding: 0 5vw; }
+			.logo-container img { height: 22px; }
+			.hero { min-height: calc(100vh - 76px); padding: 100px 5vw !important; }
+			.hero > * { max-width: 760px !important; }
+			.hero h1 { font-size: clamp(38px, 4vw, 58px) !important; margin-bottom: 30px !important; }
+			.hero p { font-size: clamp(16px, 1.35vw, 20px) !important; }
+			.hero p:nth-of-type(2) { font-size: 16px !important; }
+			.hero p:nth-of-type(3) { font-size: 18px !important; }
+			.hero .btn-gold, .btn-cta, .btn-youtube-check { max-width: 380px !important; font-size: 18px !important; padding: 16px 24px !important; margin: 28px auto !important; border-radius: 999px !important; }
+			.hero, .results, .checklist-section, .reasons-section, .step-section, .works-section, .voice-section, .footer-section { padding: 96px 5vw !important; }
+			.results h2, .reasons-title, .step-main-title, .works-main-title, .voice-main-title, .checklist-section h2 { font-size: clamp(30px, 3vw, 42px) !important; margin-bottom: 32px !important; }
+			p, .checklist-item, .timeline-content p, .reason-card p, .results p { font-size: 16px !important; line-height: 1.9 !important; }
+			.checklist { max-width: 720px !important; padding: 40px 56px !important; }
+			.reasons-inner { max-width: 1080px !important; }
+			.cards-container { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+			.reason-card { min-height: 260px; }
+			.step-inner { max-width: 920px !important; }
+			.timeline-content { text-align: left !important; }
+			.floating-button-container { left: auto; right: 24px; bottom: 24px; transform: none; max-width: 360px; border-radius: 18px; }
+		}
+		
+		/* PC拡大用の新しいアニメーションキーフレーム */
+		@media (min-width: 768px) {
+			@keyframes scroll-to-left-pc {
+				0% { transform: translateX(0); }
+				100% { transform: translateX(calc(-1 * (320px + 20px) * 2)); }
+			}
+			@keyframes scroll-to-right-pc {
+				0% { transform: translateX(calc(-1 * (320px + 20px) * 2)); }
+				100% { transform: translateX(0); }
+			}
+		}
+						
+		
+    </style>
+    
+    
+    
+    
+</head>
+<body>
+<header class="main-header">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="B-MADE" class="logo-img">
+    </div>
+</header>
+
+    <div class="infiniteslider">
+        <div class="infiniteslider-inner">
+            <div class="slide-item"><img src="images/case1.jpg" alt="shibuya1"></div>
+            <div class="slide-item"><img src="images/case2.jpg" alt="shibuya2"></div>
+            <div class="slide-item"><img src="images/case3.jpg" alt="shibuya3"></div>
+            <div class="slide-item"><img src="images/case4.jpg" alt="machida1"></div>
+            <div class="slide-item"><img src="images/case5.jpg" alt="machida2"></div>
+            <div class="slide-item"><img src="images/case6.jpg" alt="ebisu1"></div>
+            
+            <div class="slide-item"><img src="images/case1.jpg" alt="shibuya1"></div>
+            <div class="slide-item"><img src="images/case2.jpg" alt="shibuya2"></div>
+            <div class="slide-item"><img src="images/case3.jpg" alt="shibuya3"></div>
+            <div class="slide-item"><img src="images/case4.jpg" alt="machida1"></div>
+            <div class="slide-item"><img src="images/case5.jpg" alt="machida2"></div>
+            <div class="slide-item"><img src="images/case6.jpg" alt="ebisu1"></div>
+        </div>
+    </div>    
+
+<div class="wrapper">
+    <section class="hero">
+        <p class="fade-in-up" style="--delay: 0.2s; font-size: 14px;">
+            理美容室を開業したいけれど<br>何から始めればいいかわからない方へ
+        </p>
+        
+        <h1 class="fade-in-up" style="--delay: 0.6s;">
+            理想のサロンを、<br>
+            <span>開業まで一社完結でサポート</span>
+        </h1>
+                
+        <p class="fade-in-up" style="--delay: 1.0s; font-size: 15px;">
+            理美容室に特化した開業サポート
+        </p>
+        
+        <p class="fade-in-up" style="--delay: 1.4s; font-size: 15px;">
+            物件探し・融資・デザイン・内装工事まで<br>窓口ひとつで、サロンワークを続けながら進められます
+        </p>
+        
+        <div class="hero-cta-area fade-in-up" style="--delay: 1.8s;">
+            <a href="https://lin.ee/ovx9xmh" class="btn-gold btn-animation" target="_blank" rel="noopener" aria-label="LINEで無料開業相談をする">
+                LINEで無料開業相談
+            </a>
+        </div>
+    </section>
+    
+    <section class="results">
+        <div class="slide-in-left">
+            <h2 style="font-size: 18px; border-bottom: 1px solid #333; display: inline-block; padding-bottom: 5px; margin-bottom: 20px;">
+                開業準備を一社完結でサポート
+            </h2>
+            
+            <img src="images/peple.png" width="257" height="145" alt="一社完結型サポートのイメージ" style="display: block; margin-bottom: 10px;">
+        
+            <p style="font-size: 15px; line-height: 2;">
+                サロンワークを続けながら開業準備ができます。<br>
+                物件探し・融資・設計・工事まで窓口はひとつ。<br>
+                各業者との調整や下調べの負担を減らし、<br>
+                ご予算に合わせて開業後の運転資金も考えた計画をご提案します。
+            </p>
+        </div>
+    
+        <div class="stats-container">
+            <div class="fade-up-stat" style="--delay: 0.2s;"><img src="images/stat1.png" alt="500件以上"></div>
+            <div class="fade-up-stat" style="--delay: 0.5s;"><img src="images/stat2.png" alt="99パーセント"></div>
+            <div class="fade-up-stat" style="--delay: 0.8s;"><img src="images/stat3.png" alt="0件"></div>
+        </div>
+    
+        <p style="margin-top: 30px; font-weight: bold; border-bottom: 1px solid #333; display: inline-block;">
+            ご希望の開業時期から逆算したスケジュールをご提案
+        </p>
+        
+   	     <a href="https://lin.ee/ovx9xmh" class="btn-cta btn-animation" target="_blank" rel="noopener" style="background-color: #58be62; margin-top: 20px;">
+    	まずはLINEで無料相談
+		</a>
+        
+    </section>
+
+    
+    
+    
+    <section class="checklist-section">
+        <h2 style="font-size: 20px;">お悩みチェックリスト<br>該当していませんか？</h2>
+        
+       <div class="checklist">
+            <div class="checklist-item" style="--delay: 0.6s;">
+                <img src="images/checkbox.jpg" alt="" class="check-icon"> 開業について調べているが、情報が多く迷っている
+            </div>
+            <div class="checklist-item" style="--delay: 1.2s;">
+                <img src="images/checkbox.jpg" alt="" class="check-icon"> サロンに適した物件の見極め方がわからない
+            </div>
+            <div class="checklist-item" style="--delay: 1.8s;">
+                <img src="images/checkbox.jpg" alt="" class="check-icon"> 開業の流れがわからない
+            </div>
+            <div class="checklist-item" style="--delay: 2.4s;">
+                <img src="images/checkbox.jpg" alt="" class="check-icon"> 自己資金や融資について不安がある
+            </div>
+            <div class="checklist-item" style="--delay: 3.0s;">
+                <img src="images/checkbox.jpg" alt="" class="check-icon"> 働きながら準備を進められるか不安
+            </div>
+            <div class="checklist-item" style="--delay: 3.6s;">
+                <img src="images/checkbox.jpg" alt="" class="check-icon"> 事業計画書や開業予算の組み方を知りたい
+            </div>
+        </div>
+    
+        <a href="https://lin.ee/ovx9xmh" class="btn-cta btn-animation" target="_blank" rel="noopener" style="background-color: #58be62;">
+            開業スケジュールを相談する
+        </a>
+        <p style="font-size: 12px; margin-top: 10px;">内装工事をご契約いただくまで、ご相談は無料です。</p>
+    </section>
+    
+    
+
+
+    <section class="reasons-section">
+        <div class="reasons-inner">
+            <h2 class="reasons-title">弊社が選ばれる理由</h2>
+            <p class="reasons-lead">
+                理美容室の開業に必要な工程をまとめて支える<br>
+                <span>B-MADEの6つの強み</span>
+            </p>
+            
+            <div class="cards-container">
+                <div class="reason-card">
+                    <h3>スピード感のある対応</h3>
+                    <p>ご希望の開業時期から逆算し、今やることを整理。状況に応じて最短スケジュールをご提案します。</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>融資・資金計画をサポート</h3>
+                    <p>自己資金やご希望の店舗規模を確認し、無理のない資金計画と融資準備を一緒に進めます。</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>サロンワークと開業準備を両立</h3>
+                    <p>窓口を一本化し、業者との調整負担を軽減。働きながらでも準備を進めやすい体制を整えます。</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>物件を設備面から確認</h3>
+                    <p>給排水・ガス・電気容量など、サロン開業に必要な条件を確認し、契約前の判断をサポートします。</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>予算を意識した内装工事</h3>
+                    <p>開業後の運転資金を残せるよう、優先順位を整理しながら仕様と工事費を調整します。</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>コンセプトを形にするデザイン</h3>
+                    <p>お客様の過ごしやすさとスタッフ動線を考えながら、サロンらしさが伝わる空間をご提案します。</p>
+                </div>
+            </div>
+            
+            <div class="reasons-footer">
+                <p class="footer-badge-title">安心の実績と美容室の経験とノウハウ</p>
+                <div class="reasons-stats">
+                    <div class="stat-item"><img src="images/stat4.png" alt="99パーセント"></div>
+                    <div class="stat-item"><img src="images/stat5.png" alt="500件以上"></div>
+                    <div class="stat-item"><img src="images/stat6.png" alt="0件"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="step-section">
+        <div class="step-inner">
+            <h2 class="step-main-title">開業までの8STEP</h2>
+            
+            <div class="step-dots">
+                <span></span><span></span><span></span>
+            </div>
+    
+            <div class="step-white-box">
+                
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>01</span></div>
+                    <div class="timeline-content">
+                        <h3>LINE 友達登録</h3>
+                        <a href="https://lin.ee/ovx9xmh" target="_blank" rel="noopener" class="line-add-btn">
+                            LINE友達追加
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>02</span></div>
+                    <div class="timeline-content">
+                        <h3>事前相談（電話・オンライン対応）</h3>
+                        <p>ご希望や現在の状況を伺い、開業までの全体スケジュールを整理します。必要な準備と概算予算を確認できます。</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>03</span></div>
+                    <div class="timeline-content">
+                        <h3>物件ご提案・資金計画</h3>
+                        <p>サロンコンセプトや席数、ご希望のエリアに合わせて物件を検討し、資金計画も並行して進めます。</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>04</span></div>
+                    <div class="timeline-content">
+                        <h3>デザイン打ち合わせ（約90分／3回）</h3>
+                        <p>お客様の過ごしやすさとスタッフ動線を意識したレイアウトをご提案し、理想のイメージを具体化します。</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>05</span></div>
+                    <div class="timeline-content">
+                        <h3>物件契約・内装工事契約</h3>
+                        <p>物件・資金計画・デザイン内容をご確認いただき、物件契約と内装工事契約へ進みます。</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>06</span></div>
+                    <div class="timeline-content">
+                        <h3>販促物作成（ロゴ・HP・サイン等）</h3>
+                        <p>必要に応じて、サロン運営に使用するロゴ・ホームページ・サインなどを準備します。</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>07</span></div>
+                    <div class="timeline-content">
+                        <h3>工事着工（約1〜2ヶ月）</h3>
+                        <p>内装工事を進めながら、進捗や変更点を共有します。追加費用が生じる場合は、内容をご確認いただいたうえで調整します。</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="step-badge">STEP<span>08</span></div>
+                    <div class="timeline-content">
+                        <h3>保健所検査</h3>
+                        <p>保健所検査に必要な設備や準備物を事前にご案内し、検査当日までサポートします。</p>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="step-footer">
+                <p class="step-footer-text">開業後の運転資金も考え、ご予算に合わせて計画します。</p>
+                <a href="https://lin.ee/ovx9xmh" target="_blank" rel="noopener" class="btn-cta btn-animation" style="background-color: #79cb60;">
+                    LINEで開業相談をする
+                </a>
+                <p class="step-note">内装工事をご契約いただくまで、ご相談は無料です。</p>
+            </div>
+        </div>
+	</section>
+    
+    
+    
+    
+ 	<section class="works-section">
+        <div class="works-inner">
+            <h2 class="works-main-title">WORKS</h2>
+            
+            <div class="works-dots">
+                <span></span><span></span><span></span>
+            </div>
+            
+            <p class="works-lead">
+                東京・神奈川・千葉・埼玉・茨城・群馬<br>
+                理美容室の物件探しから店舗デザイン・施工まで対応
+            </p>
+    
+            <div class="works-double-slider">
+                
+                <div class="slider-row row-left">
+                    <div class="works-slider-track">
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works1.jpg" alt="目黒区自由が丘">
+                            <div class="works-overlay"><span>自由が丘<br>Nuii</span></div>
+                        </a>
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works2.jpg" alt="町田市">
+                            <div class="works-overlay"><span>町田市<br>dot.tokyo</span></div>
+                        </a>
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works3.jpg" alt="渋谷区恵比寿">
+                            <div class="works-overlay"><span>渋谷区恵比寿<br>gig</span></div>
+                        </a>
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works1.jpg" alt="目黒区自由が丘">
+                            <div class="works-overlay"><span>自由が丘<br>Nuii</span></div>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="slider-row row-right">
+                    <div class="works-slider-track">
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works4.jpg" alt="渋谷区渋谷">
+                            <div class="works-overlay"><span>渋谷区渋谷<br>BLANK TOKYO</span></div>
+                        </a>
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works5.jpg" alt="町田市">
+                            <div class="works-overlay"><span>町田市<br>いろあそび</span></div>
+                        </a>
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works6.jpg" alt="大田区北馬込">
+                            <div class="works-overlay"><span>大田区北馬込<br>GlowBase</span></div>
+                        </a>
+                        <a href="https://bmade-office.com/works/" class="works-item">
+                            <img src="images/works4.jpg" alt="渋谷区渋谷">
+                            <div class="works-overlay"><span>渋谷区渋谷<br>BLANK TOKYO</span></div>
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="works-footer">
+                <a href="https://bmade-office.com/works/" class="btn-works-check">施工事例CHECK</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="voice-section">
+        <div class="voice-inner">
+            
+            <div class="voice-header">
+                <h2 class="voice-main-title">VOICE</h2>
+                <p class="voice-sub-title">開業したオーナー様の声<br>YOUTUBEで発信中</p>
+            </div>
+    
+            <div class="voice-video-container">
+                <a href="https://www.youtube.com/@B-MADE" target="_blank" class="voice-video-card">
+                    <img src="images/youtube-thumb1.jpg" alt="開業直後・2人サロン 初月の集客は？">
+                </a>
+                
+                <a href="https://www.youtube.com/@B-MADE" target="_blank" class="voice-video-card">
+                    <img src="images/youtube-thumb2.jpg" alt="開業2年半・2人サロン 黒字化・成功のためにしてきた努力">
+                </a>
+            </div>
+    
+            <div class="voice-footer">
+                <p class="voice-link-text">YouTubeでオーナー様の開業体験を聞く</p>
+                
+                <a href="https://www.youtube.com/@B-MADE" target="_blank" class="btn-youtube-check">
+                    YouTubeで見る
+                </a>
+                
+                <p class="voice-note">実際の準備や開業後のリアルな声をご紹介しています。</p>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+    <footer class="footer-section">
+        <div class="footer-inner">
+            
+            <div class="sns-white-box">
+                <div class="sns-icons-row">
+                    <a href="https://lin.ee/ovx9xmh" target="_blank" class="sns-icon-link">
+                        <img src="images/icon-line.png" alt="LINE">
+                    </a>
+                    <a href="https://www.instagram.com/b_made66/?hl=ja" target="_blank" class="sns-icon-link">
+                        <img src="images/icon-insta.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/@B-MADE" target="_blank" class="sns-icon-link">
+                        <img src="images/icon-youtube.png" alt="YouTube">
+                    </a>
+                </div>
+                <p class="sns-box-title">各種SNSにてオーナー様向け<br>情報発信中</p>
+            </div>
+    
+           <!-- フッターナビゲーション -->
+            <nav class="footer-nav">
+                <a href="privacy.html">個人情報取扱プライバシーポリシー</a>
+                <a href="https://bmade-office.com/profile/" target="_blank" rel="noopener">B-MADE 会社概要</a>
+                <a href="https://rmade-office.com/company/" target="_blank" rel="noopener">R-MADE 会社概要</a>
+            </nav>
+        
+            <p class="copyright">Copyright © B-MADE All Rights Reserved.</p>
+    
+        </div>
+    </footer>
+    
+    <div class="floating-button-container">
+        <a href="https://lin.ee/zmfj57T" target="_blank" rel="noopener" class="float-btn float-btn-green" aria-label="LINEで物件探しを相談する">
+            <span class="icon-line">LINE</span>
+            物件探し依頼
+        </a>
+        <a href="https://lin.ee/79PnuNz" target="_blank" rel="noopener" class="float-btn float-btn-yellow" aria-label="LINEで無料開業相談をする">
+            <span class="icon-line">LINE</span>
+            無料開業相談
+        </a>
+    </div>
+    
+</div>
+
+	<script>
+		// スマホ画面に要素が入ってきたかを監視するセンサー
+		const scrollObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				// ターゲットが画面内に入ってきたら
+				if (entry.isIntersecting) {
+					entry.target.classList.add('show'); // 「.show」クラスを付与してアニメーション開始！
+					scrollObserver.unobserve(entry.target); // 1回動いたら監視を終了して負荷を軽くする
+				}
+			});
+		}, {
+			rootMargin: "-10% 0px -10% 0px" // 画面の上下10%内側に入った地点をスタート位置にする設定
+		});
+		
+		// ★センサーをセットする対象を指定（末尾に , .checklist を追加しました）
+		document.querySelectorAll('.slide-in-left, .fade-in-up, .fade-up-stat, .checklist').forEach(el => {
+			scrollObserver.observe(el);
+		});
+	</script>
+
+
+</body>
+</html>
