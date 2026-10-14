@@ -1959,8 +1959,18 @@
 			max-width: 720px;
 			margin: 0 auto 8px;
 		}
-		.checklist-heading-group h2 { margin: 0 !important; text-align: left; }
-		.checklist-heading-group h2::after { margin-left: 0; }
+		.checklist-heading-group h2 { position: relative; margin: 0 !important; text-align: left; }
+		.checklist-heading-group h2::after {
+			position: absolute;
+			left: -17px;
+			top: 50%;
+			width: 5px;
+			height: 5px;
+			margin: -12px 0 0;
+			border-radius: 50%;
+			background: var(--brand-yellow);
+			box-shadow: 0 10px 0 var(--brand-yellow), 0 20px 0 var(--brand-yellow);
+		}
 		.concern-art {
 			width: 140px;
 			margin: 0;
@@ -1972,9 +1982,15 @@
 			height: auto;
 			fill: none;
 			stroke: currentColor;
-			stroke-width: 1.8;
+			stroke-width: 1.9;
 			stroke-linecap: round;
 			stroke-linejoin: round;
+		}
+		.checklist-item span { color: #292824; font-weight: 500; }
+		.checklist-item strong {
+			font-weight: 800;
+			color: #171717;
+			background: linear-gradient(transparent 58%, rgba(252,233,112,.78) 58%);
 		}
 
 		.reasons-section .section-kicker { color: #4d4836; }
@@ -2114,11 +2130,11 @@
 				letter-spacing: .02em;
 			}
 			.results > p { font-size: 14px !important; line-height: 1.75; text-wrap: pretty; }
-			.checklist-heading-group { grid-template-columns: 82px minmax(0, 1fr); gap: 12px; max-width: 360px; margin-bottom: 8px; }
+			.checklist-heading-group { grid-template-columns: 88px minmax(0, 1fr); gap: 20px; max-width: 370px; margin-bottom: 10px; }
 			.checklist-heading-group h2 { font-size: clamp(20px, 6.4vw, 25px) !important; line-height: 1.55; }
-			.concern-art { width: 82px; margin: 0; }
+			.concern-art { width: 88px; margin: 0; }
 			.checklist { max-width: 100% !important; padding: 12px 18px !important; margin: 22px auto 26px !important; }
-			.checklist .checklist-item { grid-template-columns: 34px minmax(0, 1fr); align-items: center !important; gap: 12px; padding: 12px 0; font-size: 13px !important; }
+			.checklist .checklist-item { grid-template-columns: 34px minmax(0, 1fr); align-items: center !important; gap: 12px; padding: 13px 0; font-size: 14px !important; }
 			.checklist .check-icon { width: 28px !important; }
 			.reasons-section { padding-top: 60px; padding-bottom: 66px; }
 			.reason-card { grid-template-columns: 48px minmax(0, 1fr); gap: 14px; padding: 20px 18px; }
@@ -2267,14 +2283,16 @@
         <span class="section-kicker">02 / CHECK LIST</span>
         <div class="checklist-heading-group">
             <div class="concern-art" aria-hidden="true">
-                <svg viewBox="0 0 180 112" role="img">
-                    <path d="M66 95c2-22 13-35 31-38 19-3 35 10 40 38"/>
-                    <path d="M82 91c5-17 10-26 18-32M126 91c-3-15-9-25-20-32"/>
-                    <circle cx="100" cy="35" r="18"/>
-                    <path d="M84 31c2-13 10-20 22-18 10 1 16 8 17 18M89 36c5 3 15 4 22 0M103 53c0 8-2 15-8 21M95 73l-10-2M85 71l-5-5"/>
-                    <path d="M144 16c0-8 6-13 14-13 9 0 15 5 15 13 0 6-3 9-9 13-4 3-6 6-6 11M158 49h.1"/>
-                    <path d="M48 25c-7-4-15-2-18 4-3 7 1 13 7 16 5 3 7 6 6 12M42 66h.1"/>
-                    <path d="M17 96h146"/>
+                <svg viewBox="0 0 180 124" role="img">
+                    <path d="M72 108c2-20 7-33 19-41 8-5 20-6 29-2 14 6 21 20 23 43"/>
+                    <path d="M91 66c-8 4-14 12-18 23l-7 19M119 65c-3 14-2 28 5 43"/>
+                    <path d="M82 39c0-17 11-28 27-28 17 0 28 12 28 29 0 13-6 23-17 29"/>
+                    <path d="M83 37c2-15 12-25 27-25 12 0 21 6 25 17-10-2-20-7-27-14-5 8-14 14-25 17"/>
+                    <path d="M92 69c-7-5-11-12-12-21M80 48l6-8M86 40l6-2M88 72c-9 7-13 17-16 28"/>
+                    <path d="M72 100c9-7 16-16 20-28M91 72l-3-7M88 65l2-7M90 58l4-4"/>
+                    <path d="M94 108c8-8 15-13 24-16M118 92c7 4 12 9 16 16"/>
+                    <path d="M43 28c-4-7-2-14 5-17 8-4 16 1 17 9 1 6-3 10-8 14-4 3-5 7-4 12M55 55h.1"/>
+                    <path d="M33 108h122"/>
                 </svg>
             </div>
             <h2 style="font-size: 20px;">お悩みチェックリスト<br>該当していませんか？</h2>
@@ -2282,22 +2300,22 @@
         
        <div class="checklist">
             <div class="checklist-item" style="--delay: 0.6s;">
-                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>開業したいけれど、何から始めればいい？</span>
+                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>開業したいけれど、<strong>何から始めれば</strong>いい？</span>
             </div>
             <div class="checklist-item" style="--delay: 1.2s;">
-                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>サロン向きの物件を見極められるか不安</span>
+                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>サロン向きの<strong>物件</strong>を見極められるか不安</span>
             </div>
             <div class="checklist-item" style="--delay: 1.8s;">
-                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>開業までの流れや準備期間がわからない</span>
+                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>開業までの流れや<strong>準備期間</strong>がわからない</span>
             </div>
             <div class="checklist-item" style="--delay: 2.4s;">
-                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>自己資金や融資は、いくら必要？</span>
+                <img src="images/checkbox.jpg" alt="" class="check-icon"><span><strong>自己資金・融資</strong>は、いくら必要？</span>
             </div>
             <div class="checklist-item" style="--delay: 3.0s;">
-                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>働きながら準備を進められるか不安</span>
+                <img src="images/checkbox.jpg" alt="" class="check-icon"><span><strong>働きながら</strong>準備を進められるか不安</span>
             </div>
             <div class="checklist-item" style="--delay: 3.6s;">
-                <img src="images/checkbox.jpg" alt="" class="check-icon"><span>予算内で理想のサロンをつくりたい</span>
+                <img src="images/checkbox.jpg" alt="" class="check-icon"><span><strong>予算内</strong>で理想のサロンをつくりたい</span>
             </div>
         </div>
     
