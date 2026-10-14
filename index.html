@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>美容室専門のトータルサポート｜B-MADE(ビーメイド)</title>
     <meta name="description" content="美容室・理容室の開業を、物件探し・融資・店舗デザイン・内装工事まで一社完結でサポート。サロンワークを続けながら理想の店舗づくりを進められます。">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1146666581256217');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
 <style>
         /* --- 基本のリセット --- */
         * {
@@ -2239,6 +2253,9 @@
     
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1146666581256217&amp;ev=PageView&amp;noscript=1"
+/></noscript>
 <header class="main-header">
     <div class="logo-container">
         <img src="images/logo.png" alt="B-MADE" class="logo-img">
@@ -2698,6 +2715,18 @@
 		// ★センサーをセットする対象を指定（末尾に , .checklist を追加しました）
 		document.querySelectorAll('.slide-in-left, .fade-in-up, .fade-up-stat, .checklist').forEach(el => {
 			scrollObserver.observe(el);
+		});
+
+		// LINE導線のクリックをMeta広告の「問い合わせ」として計測
+		document.querySelectorAll('a[href^="https://lin.ee/"]').forEach(link => {
+			link.addEventListener('click', () => {
+				if (typeof fbq !== 'function') return;
+				const lineRoute = link.href.includes('QY0lAjE') ? 'property_search' : 'opening_consultation';
+				fbq('track', 'Contact', {
+					content_name: 'LINE',
+					content_category: lineRoute
+				});
+			});
 		});
 	</script>
 
