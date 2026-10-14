@@ -1717,6 +1717,330 @@
 				100% { transform: translateX(0); }
 			}
 		}
+
+		/* 2026-10 editorial luxury redesign */
+		:root {
+			--brand-yellow: #fce970;
+			--brand-black: #161616;
+			--brand-cream: #f8f5ed;
+			--brand-paper: #fffdf8;
+			--brand-line: rgba(22, 22, 22, .14);
+			--brand-serif: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
+		}
+		body {
+			background: var(--brand-cream);
+			color: var(--brand-black);
+			font-feature-settings: "palt" 1;
+		}
+		.wrapper { background: var(--brand-paper); }
+		.main-header {
+			position: relative;
+			border-bottom: 1px solid var(--brand-line);
+			background: rgba(255, 253, 248, .96) !important;
+		}
+		.main-header::after {
+			content: "SALON OPENING STUDIO";
+			margin-left: auto;
+			font-size: 8px;
+			font-weight: 700;
+			letter-spacing: .22em;
+			color: #706c64;
+		}
+		.section-kicker,
+		.hero-kicker {
+			display: block;
+			font-family: "Helvetica Neue", Arial, sans-serif;
+			font-size: 10px;
+			font-weight: 700;
+			line-height: 1.4;
+			letter-spacing: .22em;
+			color: #6a665e;
+			text-transform: uppercase;
+			margin-bottom: 14px;
+		}
+		.hero {
+			isolation: isolate;
+			min-height: 650px;
+			background-position: 58% center;
+		}
+		.hero::before {
+			background:
+				linear-gradient(180deg, rgba(10,10,10,.36) 0%, rgba(10,10,10,.62) 100%),
+				linear-gradient(90deg, rgba(0,0,0,.34), transparent 70%);
+		}
+		.hero::after {
+			content: "";
+			position: absolute;
+			inset: 18px;
+			z-index: 2;
+			border: 1px solid rgba(252,233,112,.42);
+			pointer-events: none;
+		}
+		.hero-kicker {
+			color: var(--brand-yellow);
+			margin-bottom: 12px;
+		}
+		.hero h1 {
+			font-family: var(--brand-serif);
+			font-weight: 800;
+			letter-spacing: .055em;
+			text-shadow: 0 3px 18px rgba(0,0,0,.4);
+		}
+		.hero h1::after { width: 76px; height: 2px; background: var(--brand-yellow); }
+		.hero p { text-wrap: pretty; }
+		.hero p:nth-of-type(2) {
+			border: 1px solid rgba(252,233,112,.45);
+			background: rgba(16,16,16,.28);
+			border-radius: 999px;
+			color: #fff9d9;
+		}
+		.hero-proof {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			max-width: 320px;
+			width: 100%;
+			margin: 0 auto 24px;
+			border-top: 1px solid rgba(255,255,255,.32);
+			border-bottom: 1px solid rgba(255,255,255,.32);
+		}
+		.hero-proof-item { padding: 11px 9px; }
+		.hero-proof-item + .hero-proof-item { border-left: 1px solid rgba(255,255,255,.32); }
+		.hero-proof strong {
+			display: block;
+			font-family: var(--brand-serif);
+			font-size: 23px;
+			line-height: 1.1;
+			letter-spacing: .04em;
+			color: var(--brand-yellow);
+		}
+		.hero-proof span { display: block; margin-top: 4px; font-size: 10px; letter-spacing: .08em; color: #fff; }
+		.hero .btn-gold {
+			position: relative;
+			border: 1px solid rgba(255,255,255,.55);
+			box-shadow: 0 12px 30px rgba(6,199,85,.28) !important;
+		}
+		.hero .btn-gold::after { content: "→"; position: absolute; right: 22px; font-weight: 400; }
+
+		.results,
+		.checklist-section,
+		.reasons-section,
+		.step-section,
+		.works-section,
+		.voice-section { border-top: 1px solid var(--brand-line); }
+		.results {
+			position: relative;
+			background: var(--brand-cream);
+		}
+		.results::after {
+			content: "";
+			position: absolute;
+			width: 130px;
+			height: 130px;
+			left: -72px;
+			top: 42px;
+			border: 1px solid rgba(22,22,22,.1);
+			border-radius: 50%;
+		}
+		.results .slide-in-left { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+		.results h2,
+		.checklist-section h2,
+		.reasons-title,
+		.step-main-title,
+		.works-main-title,
+		.voice-main-title {
+			font-family: var(--brand-serif);
+			font-weight: 700 !important;
+			letter-spacing: .07em !important;
+			text-wrap: balance;
+		}
+		.results h2 { border-bottom: 0 !important; position: relative; }
+		.results h2::after,
+		.checklist-section h2::after {
+			content: "";
+			display: block;
+			width: 48px;
+			height: 2px;
+			margin: 16px auto 0;
+			background: var(--brand-yellow);
+		}
+		.results .long-copy {
+			max-width: 42em;
+			margin: 20px auto 0;
+			color: #4f4b44;
+			text-wrap: pretty;
+		}
+		.stats-container { max-width: 390px; margin-top: 34px; }
+		.fade-up-stat {
+			background: rgba(255,255,255,.72);
+			border: 1px solid rgba(22,22,22,.08);
+			border-radius: 50%;
+		}
+
+		.checklist-section {
+			background-color: var(--brand-paper);
+			background-image: linear-gradient(rgba(22,22,22,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(22,22,22,.035) 1px, transparent 1px);
+			background-size: 28px 28px;
+		}
+		.checklist {
+			background: rgba(255,255,255,.94);
+			border: 1px solid var(--brand-line);
+			border-radius: 22px;
+			box-shadow: 0 18px 50px rgba(38,31,12,.08);
+		}
+		.checklist .checklist-item {
+			width: 100%;
+			padding: 13px 0;
+			margin: 0 !important;
+			border-bottom: 1px solid rgba(22,22,22,.08);
+			line-height: 1.65;
+		}
+		.checklist .checklist-item:last-child { border-bottom: 0; }
+		.checklist .check-icon {
+			width: 30px !important;
+			margin-right: 13px !important;
+			border-radius: 8px;
+			box-shadow: 0 0 0 5px rgba(252,233,112,.55);
+		}
+
+		.reasons-section .section-kicker { color: #4d4836; }
+		.reason-card { transition: transform .25s ease, box-shadow .25s ease; }
+		.reason-card:hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(62,51,8,.12); }
+
+		.step-section {
+			height: auto !important;
+			min-height: 0;
+			background-position: center;
+			padding-top: 72px;
+			padding-bottom: 72px;
+		}
+		.step-section::before { background: rgba(248,245,237,.84); }
+		.step-inner { height: auto; justify-content: flex-start; }
+		.step-main-title { margin-bottom: 10px; }
+		.step-dots { margin: 6px 0 24px; }
+		.step-dots span, .works-dots span { background: var(--brand-yellow); }
+		.step-white-box {
+			width: 100%;
+			max-width: 620px;
+			height: auto !important;
+			gap: 24px;
+			justify-content: flex-start;
+			padding: 30px 22px;
+			border: 1px solid rgba(22,22,22,.12);
+			border-radius: 24px;
+			box-shadow: 0 20px 55px rgba(38,31,12,.1);
+		}
+		.step-white-box::before { top: 42px; bottom: 42px; left: 45px; background: rgba(22,22,22,.25); }
+		.timeline-item { gap: 16px; margin: 0 !important; }
+		.step-badge {
+			width: 46px;
+			height: 46px;
+			margin: 0 !important;
+			background: var(--brand-yellow);
+			border: 1px solid rgba(22,22,22,.16);
+			font-size: 9px;
+		}
+		.step-badge span { font-size: 14px; }
+		.timeline-content { text-align: left !important; }
+		.timeline-content h3 { font-family: var(--brand-serif); font-size: 15px; line-height: 1.5; margin: 0 0 6px; }
+		.timeline-content p { font-size: 13px; line-height: 1.8; margin: 0; text-wrap: pretty; }
+		.line-add-btn { width: 100%; margin-top: 9px; }
+		.step-footer { margin-top: 30px; }
+		.step-footer-text { max-width: 32em; border-bottom: 0; line-height: 1.7; }
+
+		.works-section {
+			height: auto;
+			min-height: 620px;
+			padding: 72px 0;
+			background: var(--brand-black);
+			color: #fff;
+		}
+		.works-inner { height: auto; gap: 16px; }
+		.works-section .section-kicker { color: var(--brand-yellow); }
+		.works-main-title, .works-lead { color: #fff; }
+		.works-main-title { font-size: 34px; }
+		.works-lead { color: rgba(255,255,255,.74); text-wrap: pretty; }
+		.works-item { border-radius: 14px; border: 1px solid rgba(255,255,255,.18); }
+		.works-overlay { background: rgba(18,18,18,.62); backdrop-filter: blur(4px); }
+		.works-overlay span { color: #fff; letter-spacing: .05em; }
+		.btn-works-check {
+			background: var(--brand-yellow);
+			color: var(--brand-black);
+			padding: 11px 34px;
+			border-radius: 999px;
+			font-weight: 700;
+		}
+
+		.voice-section {
+			height: auto;
+			min-height: 0;
+			background: var(--brand-paper);
+		}
+		.voice-section .section-kicker { margin-bottom: 10px; }
+		.voice-video-card { overflow: hidden; border-radius: 16px; border: 1px solid var(--brand-line); box-shadow: 0 14px 36px rgba(38,31,12,.08); }
+		.voice-video-card img { aspect-ratio: 16 / 9; object-fit: cover; }
+		.btn-youtube-check { border-radius: 999px; background: var(--brand-black); color: #fff; }
+
+		@media (max-width: 767px) {
+			.main-header::after { content: "OPENING STUDIO"; letter-spacing: .16em; }
+			.infiniteslider { height: 72px; }
+			.hero { min-height: 660px; padding: 68px 22px 54px; }
+			.hero::after { inset: 12px; }
+			.hero > * { max-width: 344px; }
+			.hero-kicker { font-size: 9px; margin-bottom: 10px; }
+			.hero p:nth-of-type(1) { margin-bottom: 12px; color: rgba(255,255,255,.86); }
+			.hero h1 { font-size: clamp(28px, 8.7vw, 36px); line-height: 1.48; margin: 12px auto 20px; }
+			.hero p:nth-of-type(2) { margin-bottom: 18px; }
+			.hero p:nth-of-type(3) { max-width: 29em; margin-bottom: 20px; line-height: 1.9; }
+			.hero-proof { margin-bottom: 20px; }
+			section { padding: 64px 20px; }
+			.section-kicker { font-size: 9px; margin-bottom: 12px; }
+			.results h2, .checklist-section h2, .reasons-title, .step-main-title { font-size: 25px !important; line-height: 1.55; }
+			.results .long-copy {
+				max-width: 32em;
+				text-align: left;
+				font-size: 14px !important;
+				line-height: 1.95 !important;
+				letter-spacing: .02em;
+			}
+			.results > p { font-size: 14px !important; line-height: 1.75; text-wrap: pretty; }
+			.checklist { max-width: 100% !important; padding: 14px 20px !important; margin: 28px auto !important; }
+			.checklist .checklist-item { align-items: flex-start !important; font-size: 14px !important; }
+			.reasons-section { padding-top: 64px; }
+			.reason-card { grid-template-columns: 48px minmax(0, 1fr); gap: 14px; padding: 20px 18px; }
+			.reason-icon { width: 48px; height: 48px; }
+			.reason-icon svg { width: 24px; height: 24px; }
+			.reason-card h3 { font-family: var(--brand-serif); font-size: 16px; }
+			.reason-card p { font-size: 13px !important; line-height: 1.85 !important; text-wrap: pretty; }
+			.step-section { padding: 64px 18px 70px !important; }
+			.step-white-box { padding: 28px 18px; gap: 26px; }
+			.step-white-box::before { left: 40px; }
+			.timeline-content h3 { font-size: 15px !important; }
+			.timeline-content p { font-size: 13px !important; line-height: 1.85 !important; }
+			.works-section { padding: 68px 0 !important; }
+			.works-main-title, .voice-main-title { font-size: 34px !important; }
+			.works-lead { max-width: 32em; margin: 0 auto 24px; font-size: 13px; line-height: 1.8; }
+			.voice-section { padding: 68px 20px 76px; }
+			.voice-video-container { gap: 18px; }
+			.voice-video-card { max-width: 100% !important; }
+			.voice-note, .voice-link-text { text-wrap: pretty; }
+		}
+
+		@media (min-width: 768px) {
+			.section-kicker { font-size: 11px; }
+			.hero { min-height: calc(100vh - 76px); }
+			.hero::after { inset: 28px; }
+			.hero-proof { max-width: 420px; }
+			.hero-proof strong { font-size: 30px; }
+			.hero-proof span { font-size: 12px; }
+			.results .long-copy { text-align: center; }
+			.step-white-box { padding: 46px 52px !important; gap: 34px; }
+			.step-white-box::before { left: 81px !important; }
+			.step-badge { width: 58px !important; height: 58px !important; font-size: 10px !important; }
+			.step-badge span { font-size: 17px !important; }
+			.timeline-content h3 { font-size: 21px !important; }
+			.timeline-content p { font-size: 15px !important; }
+			.works-section { min-height: 760px; }
+		}
 						
 		
     </style>
@@ -1753,6 +2077,7 @@
 
 <div class="wrapper">
     <section class="hero">
+        <div class="hero-kicker fade-in-up" style="--delay: 0.05s;">BEAUTY SALON OPENING PARTNER</div>
         <p class="fade-in-up" style="--delay: 0.2s; font-size: 14px;">
             理美容室を開業したいけれど<br>何から始めればいいかわからない方へ
         </p>
@@ -1769,6 +2094,11 @@
         <p class="fade-in-up" style="--delay: 1.4s; font-size: 15px;">
             物件探し・融資・デザイン・内装工事まで<br>窓口ひとつで、サロンワークを続けながら進められます
         </p>
+
+        <div class="hero-proof fade-in-up" style="--delay: 1.6s;" aria-label="B-MADEの実績">
+            <div class="hero-proof-item"><strong>500+</strong><span>理美容室開業実績</span></div>
+            <div class="hero-proof-item"><strong>99%</strong><span>融資成功率</span></div>
+        </div>
         
         <div class="hero-cta-area fade-in-up" style="--delay: 1.8s;">
             <a href="https://lin.ee/ovx9xmh" class="btn-gold btn-animation" target="_blank" rel="noopener" aria-label="LINEで無料開業相談をする">
@@ -1779,17 +2109,15 @@
     
     <section class="results">
         <div class="slide-in-left">
+            <span class="section-kicker">01 / TOTAL SUPPORT</span>
             <h2 style="font-size: 18px; border-bottom: 1px solid #333; display: inline-block; padding-bottom: 5px; margin-bottom: 20px;">
                 開業準備を一社完結でサポート
             </h2>
             
             <img src="images/peple.png" width="257" height="145" alt="一社完結型サポートのイメージ" style="display: block; margin-bottom: 10px;">
         
-            <p style="font-size: 15px; line-height: 2;">
-                サロンワークを続けながら開業準備ができます。<br>
-                物件探し・融資・設計・工事まで窓口はひとつ。<br>
-                各業者との調整や下調べの負担を減らし、<br>
-                ご予算に合わせて開業後の運転資金も考えた計画をご提案します。
+            <p class="long-copy" style="font-size: 15px; line-height: 2;">
+                サロンワークを続けながら開業準備ができます。物件探し・融資・設計・工事まで窓口はひとつ。各業者との調整や下調べの負担を減らし、ご予算に合わせて開業後の運転資金も考えた計画をご提案します。
             </p>
         </div>
     
@@ -1813,6 +2141,7 @@
     
     
     <section class="checklist-section">
+        <span class="section-kicker">02 / CHECK LIST</span>
         <h2 style="font-size: 20px;">お悩みチェックリスト<br>該当していませんか？</h2>
         
        <div class="checklist">
@@ -1847,6 +2176,7 @@
 
     <section class="reasons-section">
         <div class="reasons-inner">
+            <span class="section-kicker">03 / WHY B-MADE</span>
             <h2 class="reasons-title">弊社が選ばれる理由</h2>
             <p class="reasons-lead">
                 理美容室の開業に必要な工程をまとめて支える<br>
@@ -1905,6 +2235,7 @@
     
     <section class="step-section">
         <div class="step-inner">
+            <span class="section-kicker">04 / PROCESS</span>
             <h2 class="step-main-title">開業までの8STEP</h2>
             
             <div class="step-dots">
@@ -1996,6 +2327,7 @@
     
  	<section class="works-section">
         <div class="works-inner">
+            <span class="section-kicker">05 / PROJECTS</span>
             <h2 class="works-main-title">WORKS</h2>
             
             <div class="works-dots">
@@ -2064,6 +2396,7 @@
         <div class="voice-inner">
             
             <div class="voice-header">
+                <span class="section-kicker">06 / OWNER'S VOICE</span>
                 <h2 class="voice-main-title">VOICE</h2>
                 <p class="voice-sub-title">開業したオーナー様の声<br>YOUTUBEで発信中</p>
             </div>
