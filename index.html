@@ -1521,6 +1521,101 @@
 			.timeline-content { text-align: left !important; }
 			.floating-button-container { left: auto; right: 24px; bottom: 24px; transform: none; max-width: 360px; border-radius: 18px; }
 		}
+
+		/* 2026-10 Meta広告向けスマートフォン最適化 */
+		.logo-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 3px;
+		}
+		.header-kana {
+			font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+			font-size: 9px;
+			font-weight: 600;
+			line-height: 1;
+			letter-spacing: .2em;
+			color: #4a4a4a;
+		}
+		.hero h1 {
+			font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
+			font-weight: 800;
+			letter-spacing: .045em;
+			text-wrap: balance;
+		}
+		/* 通常のLINE導線はLINE公式カラーに統一 */
+		.btn-gold,
+		.btn-cta,
+		.line-add-btn {
+			background: #06c755 !important;
+			color: #fff !important;
+			box-shadow: 0 8px 22px rgba(6, 199, 85, .28) !important;
+		}
+		/* 画面下部の固定導線：白い外枠をなくし、相談ボタンだけブランドイエローに */
+		.floating-button-container {
+			background: transparent;
+			box-shadow: none;
+		}
+		.float-btn-green {
+			background: #287a65;
+			color: #fff;
+		}
+		.float-btn-yellow {
+			background: #f2d44f;
+			color: #171717;
+			box-shadow: inset 0 -3px 0 rgba(122, 91, 0, .14);
+		}
+		.icon-line {
+			background: transparent;
+			padding: 0;
+			border-radius: 0;
+			color: inherit;
+			font-size: 10px;
+			letter-spacing: .08em;
+		}
+		@media (max-width: 767px) {
+			html, body { width: 100%; overflow-x: hidden; }
+			body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+			.wrapper { width: 100%; max-width: 500px; }
+			.main-header { height: 68px !important; padding: 0 20px; }
+			.logo-container img { height: 17px; }
+			.infiniteslider { height: 86px; }
+			section { padding: 56px 18px; }
+			.hero {
+				min-height: 570px;
+				padding: 62px 20px 58px;
+				background-position: center center;
+			}
+			.hero > * { max-width: 350px; }
+			.hero h1 {
+				font-size: clamp(27px, 8.1vw, 34px);
+				line-height: 1.48;
+				margin: 14px auto 23px;
+				padding-bottom: 18px;
+			}
+			.hero p:nth-of-type(1) { font-size: 13px !important; line-height: 1.75; }
+			.hero p:nth-of-type(2) { font-size: 13px !important; padding: 8px 14px; }
+			.hero p:nth-of-type(3) { font-size: 14px !important; line-height: 1.85; }
+			.btn-gold, .btn-cta, .line-add-btn {
+				min-height: 54px;
+				font-size: 16px;
+				padding: 13px 18px;
+			}
+			.floating-button-container {
+				width: min(100%, 500px);
+				gap: 6px;
+				padding: 0 8px env(safe-area-inset-bottom);
+			}
+			.float-btn {
+				min-width: 0;
+				min-height: 62px;
+				padding: 8px 5px 9px;
+				border-radius: 14px 14px 0 0;
+				font-size: clamp(12px, 3.7vw, 15px);
+				line-height: 1.25;
+			}
+		}
 		
 		/* PC拡大用の新しいアニメーションキーフレーム */
 		@media (min-width: 768px) {
@@ -1545,6 +1640,7 @@
 <header class="main-header">
     <div class="logo-container">
         <img src="images/logo.png" alt="B-MADE" class="logo-img">
+		<span class="header-kana">ビーメイド</span>
     </div>
 </header>
 
