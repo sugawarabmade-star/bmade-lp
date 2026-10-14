@@ -2130,9 +2130,10 @@
 				letter-spacing: .02em;
 			}
 			.results > p { font-size: 14px !important; line-height: 1.75; text-wrap: pretty; }
-			.checklist-heading-group { grid-template-columns: 88px minmax(0, 1fr); gap: 20px; max-width: 370px; margin-bottom: 10px; }
-			.checklist-heading-group h2 { font-size: clamp(20px, 6.4vw, 25px) !important; line-height: 1.55; }
-			.concern-art { width: 88px; margin: 0; }
+			.checklist-heading-group { grid-template-columns: 70px minmax(0, 1fr); gap: 14px; max-width: 370px; margin-bottom: 10px; }
+			.checklist-heading-group h2 { font-size: clamp(18px, 5.4vw, 22px) !important; line-height: 1.55; }
+			.checklist-heading-group h2::after { left: -11px; }
+			.concern-art { width: 70px; margin: 0; }
 			.checklist { max-width: 100% !important; padding: 12px 18px !important; margin: 22px auto 26px !important; }
 			.checklist .checklist-item { grid-template-columns: 34px minmax(0, 1fr); align-items: center !important; gap: 12px; padding: 13px 0; font-size: 14px !important; }
 			.checklist .check-icon { width: 28px !important; }
@@ -2283,16 +2284,14 @@
         <span class="section-kicker">02 / CHECK LIST</span>
         <div class="checklist-heading-group">
             <div class="concern-art" aria-hidden="true">
-                <svg viewBox="0 0 180 124" role="img">
-                    <path d="M72 108c2-20 7-33 19-41 8-5 20-6 29-2 14 6 21 20 23 43"/>
-                    <path d="M91 66c-8 4-14 12-18 23l-7 19M119 65c-3 14-2 28 5 43"/>
-                    <path d="M82 39c0-17 11-28 27-28 17 0 28 12 28 29 0 13-6 23-17 29"/>
-                    <path d="M83 37c2-15 12-25 27-25 12 0 21 6 25 17-10-2-20-7-27-14-5 8-14 14-25 17"/>
-                    <path d="M92 69c-7-5-11-12-12-21M80 48l6-8M86 40l6-2M88 72c-9 7-13 17-16 28"/>
-                    <path d="M72 100c9-7 16-16 20-28M91 72l-3-7M88 65l2-7M90 58l4-4"/>
-                    <path d="M94 108c8-8 15-13 24-16M118 92c7 4 12 9 16 16"/>
-                    <path d="M43 28c-4-7-2-14 5-17 8-4 16 1 17 9 1 6-3 10-8 14-4 3-5 7-4 12M55 55h.1"/>
-                    <path d="M33 108h122"/>
+                <svg viewBox="0 0 120 108" role="img">
+                    <path d="M40 40c0-19 12-31 30-31 19 0 31 13 31 32 0 18-13 31-30 31-18 0-30-13-31-32Z"/>
+                    <path d="M41 37C43 18 55 9 72 9c13 0 23 6 28 17-12-1-21-6-28-13-6 10-16 19-31 24Z"/>
+                    <path d="M55 43h.1M85 43h.1M63 57c5 3 10 3 15 0"/>
+                    <path d="M44 68c-12 6-19 17-21 35M91 68c13 5 21 17 24 35M52 70c3 9 10 15 19 15 8 0 15-6 18-15"/>
+                    <g transform="rotate(-14 27 76)"><rect x="18" y="60" width="20" height="31" rx="3"/><path d="M24 65h8"/></g>
+                    <path d="M45 102c-2-13-5-22-10-29M35 73l-5 5 4 13 10 9M13 25v-12M20 22V9M27 20v-8"/>
+                    <path d="M7 103h108"/>
                 </svg>
             </div>
             <h2 style="font-size: 20px;">お悩みチェックリスト<br>該当していませんか？</h2>
