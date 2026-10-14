@@ -1902,6 +1902,56 @@
 			color: #4f4b44;
 			text-wrap: pretty;
 		}
+		.support-copy {
+			max-width: 610px;
+			margin: 24px auto 0;
+			padding: 24px 26px;
+			background: rgba(255,255,255,.82);
+			border: 1px solid rgba(22,22,22,.08);
+			border-radius: 18px;
+			box-shadow: 0 14px 36px rgba(38,31,12,.06);
+			text-align: left;
+		}
+		.support-copy p {
+			max-width: none !important;
+			margin: 0 !important;
+			font-size: 15px !important;
+			line-height: 2 !important;
+			letter-spacing: .025em;
+			color: #35322d;
+		}
+		.support-copy p + p {
+			margin-top: 15px !important;
+			padding-top: 15px;
+			border-top: 1px solid rgba(22,22,22,.08);
+		}
+		.text-marker {
+			font-weight: 800;
+			color: #171612;
+			background: linear-gradient(transparent 58%, rgba(252,233,112,.9) 58%);
+			padding: 0 .08em;
+			box-decoration-break: clone;
+			-webkit-box-decoration-break: clone;
+		}
+		.support-emphasis {
+			font-family: var(--brand-serif);
+			font-size: 1.08em;
+			font-weight: 700;
+		}
+		.support-cta-lead {
+			margin: 30px auto 0 !important;
+			font-size: 15px !important;
+			line-height: 1.85 !important;
+			font-weight: 600;
+			color: #34312b;
+		}
+		.support-cta-lead small {
+			display: block;
+			margin-top: 6px;
+			font-size: 12px;
+			font-weight: 500;
+			color: #716b60;
+		}
 		.stats-container { max-width: 390px; margin-top: 34px; }
 		.fade-up-stat {
 			background: rgba(255,255,255,.72);
@@ -2124,6 +2174,11 @@
 				line-height: 1.95 !important;
 				letter-spacing: .02em;
 			}
+			.support-copy { margin-top: 20px; padding: 20px 18px; border-radius: 15px; }
+			.support-copy p { font-size: 14px !important; line-height: 1.9 !important; }
+			.support-copy p + p { margin-top: 13px !important; padding-top: 13px; }
+			.support-emphasis { font-size: 1.06em; }
+			.support-cta-lead { margin-top: 26px !important; font-size: 14px !important; }
 			.results > p { font-size: 14px !important; line-height: 1.75; text-wrap: pretty; }
 			.checklist-heading-group { grid-template-columns: 70px minmax(0, 1fr); gap: 14px; max-width: 370px; margin-bottom: 10px; }
 			.checklist-heading-group h2 { font-size: clamp(18px, 5.4vw, 22px) !important; line-height: 1.55; }
@@ -2251,9 +2306,18 @@
             
             <img src="images/peple.png" width="257" height="145" alt="一社完結型サポートのイメージ" style="display: block; margin-bottom: 10px;">
         
-            <p class="long-copy" style="font-size: 15px; line-height: 2;">
-                サロンワークを続けながら開業準備ができます。物件探し・融資・設計・工事まで窓口はひとつ。各業者との調整や下調べの負担を減らし、ご予算に合わせて開業後の運転資金も考えた計画をご提案します。
-            </p>
+            <div class="support-copy">
+                <p>
+                    <span class="text-marker support-emphasis">サロンワークを続けながら</span>、開業準備を進められます。<br>
+                    物件探し・融資・設計・工事まで<span class="text-marker">窓口はひとつ</span>。迷いを減らして、<span class="text-marker">スピード開業</span>へ。
+                </p>
+                <p>
+                    各業者との調整や下調べの負担を減らし、ご予算に合わせて<span class="text-marker">開業後の運転資金</span>まで考えた計画をご提案します。
+                </p>
+                <p>
+                    <span class="text-marker support-emphasis">自社職人だから安心</span>。工事着工後の変更にも柔軟に対応し、<span class="text-marker">中間マージンをカット</span>した無理のないお見積もりをご提案します。
+                </p>
+            </div>
         </div>
     
         <div class="stats-container">
@@ -2262,12 +2326,13 @@
             <div class="fade-up-stat" style="--delay: 0.8s;"><img src="images/stat3.png" alt="0件"></div>
         </div>
     
-        <p style="margin-top: 30px; font-weight: bold; border-bottom: 1px solid #333; display: inline-block;">
-            ご希望の開業時期から逆算したスケジュールをご提案
+        <p class="support-cta-lead">
+            <span class="text-marker">まずは、お見積もりのご相談から</span>
+            <small>ご希望の開業時期・ご予算をLINEでお聞かせください</small>
         </p>
         
-   	     <a href="https://lin.ee/ovx9xmh" class="btn-cta btn-animation" target="_blank" rel="noopener" style="background-color: #58be62; margin-top: 20px;">
-    	まずはLINEで無料相談
+	     <a href="https://lin.ee/ovx9xmh" class="btn-cta btn-animation" target="_blank" rel="noopener" style="background-color: #58be62; margin-top: 18px;">
+	LINEで無料見積もり相談
 		</a>
         
     </section>
